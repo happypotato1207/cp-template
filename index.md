@@ -1,11 +1,11 @@
 ---
 data:
   libraryCategories:
-  - name: Data Structures
+  - name: Data_Structures
     pages:
     - icon: ':warning:'
-      path: Data Structures/Segment Tree.hpp
-      title: Data Structures/Segment Tree.hpp
+      path: Data_Structures/Segment_Tree.hpp
+      title: Data_Structures/Segment_Tree.hpp
   - name: Graph
     pages:
     - icon: ':heavy_check_mark:'

@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Data Structures/Segment Tree.hpp\"\nstruct Data {\n\tlong\
+  bundledCode: "#line 1 \"Data_Structures/Segment_Tree.hpp\"\nstruct Data {\n\tlong\
     \ long int val = 0;\n};\nclass SegmentTree {\npublic:\n\tSegmentTree(vector<Data>\
     \ v) {\n\t\tarr = v;\n\t\tn = arr.size();\n\t\tseg.resize((n << 1));\n\t\tBuild();\n\
     \t}\n\tvoid Build() {\n\t\tfor (int i = 0; i < n; i++) seg[i + n] = arr[i];\n\t\
@@ -37,15 +37,15 @@ data:
     \tcombine_ret.val = x.val + y.val;\n\t\treturn combine_ret;\n\t}\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: Data Structures/Segment Tree.hpp
+  path: Data_Structures/Segment_Tree.hpp
   requiredBy: []
-  timestamp: '2022-02-05 13:26:00+08:00'
+  timestamp: '2022-02-05 13:29:14+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: Data Structures/Segment Tree.hpp
+documentation_of: Data_Structures/Segment_Tree.hpp
 layout: document
 redirect_from:
-- /library/Data Structures/Segment Tree.hpp
-- /library/Data Structures/Segment Tree.hpp.html
-title: Data Structures/Segment Tree.hpp
+- /library/Data_Structures/Segment_Tree.hpp
+- /library/Data_Structures/Segment_Tree.hpp.html
+title: Data_Structures/Segment_Tree.hpp
 ---
