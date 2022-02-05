@@ -19,6 +19,9 @@ data:
   verificationCategories:
   - name: Tests
     pages:
+    - icon: ':x:'
+      path: Tests/Point_Add_Range_Sum.test.cpp
+      title: Tests/Point_Add_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: Tests/UnionFind.test.cpp
       title: Tests/UnionFind.test.cpp
