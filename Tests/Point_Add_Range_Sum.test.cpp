@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
 
 #include "../Template/template.cpp"
-#include "../Graph/Data_Structures/Segment_Tree.hpp"
+#include "../Data_Structures/Segment_Tree.hpp"
 
 void init() {
 	
