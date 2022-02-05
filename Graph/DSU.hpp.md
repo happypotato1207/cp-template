@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: Tests/UnionFind.cpp
-    title: Tests/UnionFind.cpp
-  _extendedVerifiedWith: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Tests/UnionFind.test.cpp
+    title: Tests/UnionFind.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/DSU.hpp\"\nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int\
@@ -42,11 +42,11 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: Graph/DSU.hpp
-  requiredBy:
-  - Tests/UnionFind.cpp
+  requiredBy: []
   timestamp: '2022-02-05 11:20:18+08:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - Tests/UnionFind.test.cpp
 documentation_of: Graph/DSU.hpp
 layout: document
 redirect_from:

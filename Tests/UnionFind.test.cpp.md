@@ -1,21 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Graph/DSU.hpp
     title: Graph/DSU.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Template/template.cpp
     title: Template/template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/unionfind
     links:
     - https://judge.yosupo.jp/problem/unionfind
-  bundledCode: "#line 1 \"Tests/UnionFind.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\
+  bundledCode: "#line 1 \"Tests/UnionFind.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\
     \n\n#line 1 \"Template/template.cpp\"\n#include <bits/stdc++.h>\n#define ll long\
     \ long\n#define ull unsigned long long\n#define ld long double\n#define pii pair<int,\
     \ int>\n#define pll pair<ll int, ll int>\n#define vi vector<int>\n#define vl vector<ll\
@@ -54,8 +56,8 @@ data:
     \tbool CheckConnected(int u, int v) {\n\t\treturn (FindRoot(u) == FindRoot(v));\n\
     \t}\n\tint GetRank(int u) {\n\t\treturn rank[u];\n\t}\n\tint GetSize(int u) {\n\
     \t\treturn size[FindRoot(u)];\n\t}\nprivate:\n\tvector<int> parent, rank, size;\n\
-    \tbool directed, path_compression;\n};\n#line 5 \"Tests/UnionFind.cpp\"\n\nvoid\
-    \ init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
+    \tbool directed, path_compression;\n};\n#line 5 \"Tests/UnionFind.test.cpp\"\n\
+    \nvoid init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
     \tint n, q;\n\tcin >> n >> q;\n\tDisjointSetUnion DSU(n);\n\twhile (q--) {\n\t\
     \tint cmd, u, v;\n\t\tcin >> cmd >> u >> v;\n\t\tif (cmd == 0) {\n\t\t\tDSU.Union(u,\
     \ v);\n\t\t} else {\n\t\t\tcout << DSU.CheckConnected(u, v) << endl;\n\t\t}\n\t\
@@ -69,16 +71,16 @@ data:
   dependsOn:
   - Template/template.cpp
   - Graph/DSU.hpp
-  isVerificationFile: false
-  path: Tests/UnionFind.cpp
+  isVerificationFile: true
+  path: Tests/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2022-02-05 11:25:49+08:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2022-02-05 13:02:29+08:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: Tests/UnionFind.cpp
+documentation_of: Tests/UnionFind.test.cpp
 layout: document
 redirect_from:
-- /library/Tests/UnionFind.cpp
-- /library/Tests/UnionFind.cpp.html
-title: Tests/UnionFind.cpp
+- /verify/Tests/UnionFind.test.cpp
+- /verify/Tests/UnionFind.test.cpp.html
+title: Tests/UnionFind.test.cpp
 ---
