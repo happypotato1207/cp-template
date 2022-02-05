@@ -1,0 +1,56 @@
+---
+data:
+  _extendedDependsOn: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: Tests/UnionFind.cpp
+    title: Tests/UnionFind.cpp
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
+  attributes:
+    links: []
+  bundledCode: "#line 1 \"Graph/DSU.hpp\"\nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int\
+    \ n, bool directed_temp = true, bool path_compression_temp = true) {\n\t\tparent.resize(n\
+    \ + 1, -1);\n\t\trank.resize(n + 1, 1);\n\t\tsize.resize(n + 1, 1);\n\t\tdirected\
+    \ = directed_temp;\n\t\tpath_compression = path_compression_temp;\n\t}\n\tint\
+    \ FindRoot(int u) {\n\t\tif (parent[u] == -1) return u;\n\t\tif (path_compression)\
+    \ return parent[u] = FindRoot(parent[u]);\n\t\telse return FindRoot(parent[u]);\n\
+    \t}\n\tvoid Union(int u, int v) { // if undirected then assign u -> v\n\t\tu =\
+    \ FindRoot(u);\n\t\tv = FindRoot(v);\n\t\tif (u != v) {\n\t\t\tif (directed) {\n\
+    \t\t\t\tif (rank[u] < rank[v]) swap(u, v);\n\t\t\t}\n\t\t\tparent[u] = v;\n\t\t\
+    \trank[u] = rank[v] + 1;\n\t\t\tsize[v] += size[u];\n\t\t}\n\t\treturn;\n\t}\n\
+    \tbool CheckConnected(int u, int v) {\n\t\treturn (FindRoot(u) == FindRoot(v));\n\
+    \t}\n\tint GetRank(int u) {\n\t\treturn rank[u];\n\t}\n\tint GetSize(int u) {\n\
+    \t\treturn size[FindRoot(u)];\n\t}\nprivate:\n\tvector<int> parent, rank, size;\n\
+    \tbool directed, path_compression;\n};\n"
+  code: "class DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int n, bool directed_temp\
+    \ = true, bool path_compression_temp = true) {\n\t\tparent.resize(n + 1, -1);\n\
+    \t\trank.resize(n + 1, 1);\n\t\tsize.resize(n + 1, 1);\n\t\tdirected = directed_temp;\n\
+    \t\tpath_compression = path_compression_temp;\n\t}\n\tint FindRoot(int u) {\n\t\
+    \tif (parent[u] == -1) return u;\n\t\tif (path_compression) return parent[u] =\
+    \ FindRoot(parent[u]);\n\t\telse return FindRoot(parent[u]);\n\t}\n\tvoid Union(int\
+    \ u, int v) { // if undirected then assign u -> v\n\t\tu = FindRoot(u);\n\t\t\
+    v = FindRoot(v);\n\t\tif (u != v) {\n\t\t\tif (directed) {\n\t\t\t\tif (rank[u]\
+    \ < rank[v]) swap(u, v);\n\t\t\t}\n\t\t\tparent[u] = v;\n\t\t\trank[u] = rank[v]\
+    \ + 1;\n\t\t\tsize[v] += size[u];\n\t\t}\n\t\treturn;\n\t}\n\tbool CheckConnected(int\
+    \ u, int v) {\n\t\treturn (FindRoot(u) == FindRoot(v));\n\t}\n\tint GetRank(int\
+    \ u) {\n\t\treturn rank[u];\n\t}\n\tint GetSize(int u) {\n\t\treturn size[FindRoot(u)];\n\
+    \t}\nprivate:\n\tvector<int> parent, rank, size;\n\tbool directed, path_compression;\n\
+    };\n"
+  dependsOn: []
+  isVerificationFile: false
+  path: Graph/DSU.hpp
+  requiredBy:
+  - Tests/UnionFind.cpp
+  timestamp: '2022-02-05 11:20:18+08:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: Graph/DSU.hpp
+layout: document
+redirect_from:
+- /library/Graph/DSU.hpp
+- /library/Graph/DSU.hpp.html
+title: Graph/DSU.hpp
+---
