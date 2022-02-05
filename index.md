@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: Data_Structures
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Data_Structures/Segment_Tree.hpp
       title: Data_Structures/Segment_Tree.hpp
   - name: Graph
@@ -19,7 +19,7 @@ data:
   verificationCategories:
   - name: Tests
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Tests/Point_Add_Range_Sum.test.cpp
       title: Tests/Point_Add_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'

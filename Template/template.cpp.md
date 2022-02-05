@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: Tests/Point_Add_Range_Sum.test.cpp
+    title: Tests/Point_Add_Range_Sum.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
   _isVerificationFailed: false
@@ -70,6 +73,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/UnionFind.test.cpp
+  - Tests/Point_Add_Range_Sum.test.cpp
 documentation_of: Template/template.cpp
 layout: document
 redirect_from:
