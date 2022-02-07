@@ -3,6 +3,10 @@
 #include "../Template/template.cpp"
 #include "../Flow/Bipartite_Matching.hpp"
 
+void init() {
+	// initialize
+
+}
 void solve(int case_no) {
 	// implementation
 	int l, r, m;
