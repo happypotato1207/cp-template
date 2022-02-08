@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: Tests/Matching_on_Bipartite_Graph.test.cpp
+    title: Tests/Matching_on_Bipartite_Graph.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Tests/Point_Add_Range_Sum.test.cpp
     title: Tests/Point_Add_Range_Sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -72,6 +75,7 @@ data:
   timestamp: '2022-02-05 11:24:10+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - Tests/Matching_on_Bipartite_Graph.test.cpp
   - Tests/UnionFind.test.cpp
   - Tests/Point_Add_Range_Sum.test.cpp
 documentation_of: Template/template.cpp

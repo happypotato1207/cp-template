@@ -6,6 +6,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Data_Structures/Segment_Tree.hpp
       title: Data_Structures/Segment_Tree.hpp
+  - name: Flow
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: Flow/Bipartite_Matching.hpp
+      title: Flow/Bipartite_Matching.hpp
   - name: Graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -19,6 +24,9 @@ data:
   verificationCategories:
   - name: Tests
     pages:
+    - icon: ':heavy_check_mark:'
+      path: Tests/Matching_on_Bipartite_Graph.test.cpp
+      title: Tests/Matching_on_Bipartite_Graph.test.cpp
     - icon: ':heavy_check_mark:'
       path: Tests/Point_Add_Range_Sum.test.cpp
       title: Tests/Point_Add_Range_Sum.test.cpp
