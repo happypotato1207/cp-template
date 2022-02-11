@@ -23,8 +23,10 @@ data:
     \trank[u] = rank[v] + 1;\n\t\t\tsize[v] += size[u];\n\t\t}\n\t\treturn;\n\t}\n\
     \tbool CheckConnected(int u, int v) {\n\t\treturn (FindRoot(u) == FindRoot(v));\n\
     \t}\n\tint GetRank(int u) {\n\t\treturn rank[u];\n\t}\n\tint GetSize(int u) {\n\
-    \t\treturn size[FindRoot(u)];\n\t}\nprivate:\n\tvector<int> parent, rank, size;\n\
-    \tbool directed, path_compression;\n};\n"
+    \t\treturn size[FindRoot(u)];\n\t}\n\tvoid Reset() {\n\t\tfor (int i = 0; i <\
+    \ parent.size(); i++) {\n\t\t\tparent[i] = -1;\n\t\t\trank[i] = 1;\n\t\t\tsize[i]\
+    \ = 1;\n\t\t}\n\t}\nprivate:\n\tvector<int> parent, rank, size;\n\tbool directed,\
+    \ path_compression;\n};\n"
   code: "class DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int n, bool directed_temp\
     \ = true, bool path_compression_temp = true) {\n\t\tparent.resize(n + 1, -1);\n\
     \t\trank.resize(n + 1, 1);\n\t\tsize.resize(n + 1, 1);\n\t\tdirected = directed_temp;\n\
@@ -37,13 +39,14 @@ data:
     \ + 1;\n\t\t\tsize[v] += size[u];\n\t\t}\n\t\treturn;\n\t}\n\tbool CheckConnected(int\
     \ u, int v) {\n\t\treturn (FindRoot(u) == FindRoot(v));\n\t}\n\tint GetRank(int\
     \ u) {\n\t\treturn rank[u];\n\t}\n\tint GetSize(int u) {\n\t\treturn size[FindRoot(u)];\n\
-    \t}\nprivate:\n\tvector<int> parent, rank, size;\n\tbool directed, path_compression;\n\
-    };\n"
+    \t}\n\tvoid Reset() {\n\t\tfor (int i = 0; i < parent.size(); i++) {\n\t\t\tparent[i]\
+    \ = -1;\n\t\t\trank[i] = 1;\n\t\t\tsize[i] = 1;\n\t\t}\n\t}\nprivate:\n\tvector<int>\
+    \ parent, rank, size;\n\tbool directed, path_compression;\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/DSU.hpp
   requiredBy: []
-  timestamp: '2022-02-05 11:20:18+08:00'
+  timestamp: '2022-02-11 11:17:36+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/UnionFind.test.cpp

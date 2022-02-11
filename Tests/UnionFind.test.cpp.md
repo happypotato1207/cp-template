@@ -55,13 +55,14 @@ data:
     \trank[u] = rank[v] + 1;\n\t\t\tsize[v] += size[u];\n\t\t}\n\t\treturn;\n\t}\n\
     \tbool CheckConnected(int u, int v) {\n\t\treturn (FindRoot(u) == FindRoot(v));\n\
     \t}\n\tint GetRank(int u) {\n\t\treturn rank[u];\n\t}\n\tint GetSize(int u) {\n\
-    \t\treturn size[FindRoot(u)];\n\t}\nprivate:\n\tvector<int> parent, rank, size;\n\
-    \tbool directed, path_compression;\n};\n#line 5 \"Tests/UnionFind.test.cpp\"\n\
-    \nvoid init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
-    \tint n, q;\n\tcin >> n >> q;\n\tDisjointSetUnion DSU(n);\n\twhile (q--) {\n\t\
-    \tint cmd, u, v;\n\t\tcin >> cmd >> u >> v;\n\t\tif (cmd == 0) {\n\t\t\tDSU.Union(u,\
-    \ v);\n\t\t} else {\n\t\t\tcout << DSU.CheckConnected(u, v) << endl;\n\t\t}\n\t\
-    }\n}\n"
+    \t\treturn size[FindRoot(u)];\n\t}\n\tvoid Reset() {\n\t\tfor (int i = 0; i <\
+    \ parent.size(); i++) {\n\t\t\tparent[i] = -1;\n\t\t\trank[i] = 1;\n\t\t\tsize[i]\
+    \ = 1;\n\t\t}\n\t}\nprivate:\n\tvector<int> parent, rank, size;\n\tbool directed,\
+    \ path_compression;\n};\n#line 5 \"Tests/UnionFind.test.cpp\"\n\nvoid init() {\n\
+    \t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\tint n,\
+    \ q;\n\tcin >> n >> q;\n\tDisjointSetUnion DSU(n);\n\twhile (q--) {\n\t\tint cmd,\
+    \ u, v;\n\t\tcin >> cmd >> u >> v;\n\t\tif (cmd == 0) {\n\t\t\tDSU.Union(u, v);\n\
+    \t\t} else {\n\t\t\tcout << DSU.CheckConnected(u, v) << endl;\n\t\t}\n\t}\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include\
     \ \"../Template/template.cpp\"\n#include \"../Graph/DSU.hpp\"\n\nvoid init() {\n\
     \t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\tint n,\
@@ -74,7 +75,7 @@ data:
   isVerificationFile: true
   path: Tests/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2022-02-08 01:27:25+08:00'
+  timestamp: '2022-02-11 11:17:36+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/UnionFind.test.cpp
