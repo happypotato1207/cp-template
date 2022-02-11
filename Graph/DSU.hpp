@@ -34,6 +34,13 @@ public:
 	int GetSize(int u) {
 		return size[FindRoot(u)];
 	}
+	void Reset() {
+		for (int i = 0; i < parent.size(); i++) {
+			parent[i] = -1;
+			rank[i] = 1;
+			size[i] = 1;
+		}
+	}
 private:
 	vector<int> parent, rank, size;
 	bool directed, path_compression;
