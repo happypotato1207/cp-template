@@ -2,10 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Tests/Matching_on_Bipartite_Graph.test.cpp
+    title: Tests/Matching_on_Bipartite_Graph.test.cpp
+  - icon: ':x:'
+    path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
+    title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Tests/UnionFind.test.cpp
+    title: Tests/UnionFind.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Header/header.cpp\"\n#include <bits/stdc++.h>\n#define ll\
@@ -64,8 +73,11 @@ data:
   path: Header/header.cpp
   requiredBy: []
   timestamp: '2022-02-14 11:34:42+08:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_SOME_WA
+  verifiedWith:
+  - Tests/Matching_on_Bipartite_Graph.test.cpp
+  - Tests/UnionFind.test.cpp
+  - Tests/Point_Add_Range_Sum_(Assign).test.cpp
 documentation_of: Header/header.cpp
 layout: document
 redirect_from:

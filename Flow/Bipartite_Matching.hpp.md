@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Tests/Matching_on_Bipartite_Graph.test.cpp
+    title: Tests/Matching_on_Bipartite_Graph.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Flow/Bipartite_Matching.hpp\"\nclass BipartiteMatching {\n\
@@ -55,8 +58,9 @@ data:
   path: Flow/Bipartite_Matching.hpp
   requiredBy: []
   timestamp: '2022-02-08 01:32:38+08:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - Tests/Matching_on_Bipartite_Graph.test.cpp
 documentation_of: Flow/Bipartite_Matching.hpp
 layout: document
 redirect_from:
