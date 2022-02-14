@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: Data_Structures/Segment_Tree
     pages:
+    - icon: ':warning:'
+      path: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
+      title: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
     - icon: ':heavy_check_mark:'
       path: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
       title: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
