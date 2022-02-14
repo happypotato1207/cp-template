@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Graph/DSU.hpp
     title: Graph/DSU.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.cpp
     title: Template/template.cpp
   _extendedRequiredBy: []

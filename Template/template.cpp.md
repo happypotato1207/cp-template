@@ -6,12 +6,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: Tests/Matching_on_Bipartite_Graph.test.cpp
     title: Tests/Matching_on_Bipartite_Graph.test.cpp
+  - icon: ':x:'
+    path: Tests/Point_Add_Range_Sum.test.cpp
+    title: Tests/Point_Add_Range_Sum.test.cpp
   - icon: ':heavy_check_mark:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Template/template.cpp\"\n#include <bits/stdc++.h>\n#define\
@@ -70,10 +73,11 @@ data:
   path: Template/template.cpp
   requiredBy: []
   timestamp: '2022-02-05 11:24:10+08:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - Tests/Matching_on_Bipartite_Graph.test.cpp
   - Tests/UnionFind.test.cpp
+  - Tests/Point_Add_Range_Sum.test.cpp
 documentation_of: Template/template.cpp
 layout: document
 redirect_from:

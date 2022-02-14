@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Flow/Bipartite_Matching.hpp
     title: Flow/Bipartite_Matching.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.cpp
     title: Template/template.cpp
   _extendedRequiredBy: []
