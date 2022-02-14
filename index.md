@@ -6,6 +6,11 @@ data:
     - icon: ':x:'
       path: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
       title: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
+  - name: Data_Structures
+    pages:
+    - icon: ':warning:'
+      path: Data_Structures/Sparse_Table.hpp
+      title: Data_Structures/Sparse_Table.hpp
   - name: Flow
     pages:
     - icon: ':heavy_check_mark:'
