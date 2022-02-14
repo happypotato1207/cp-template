@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: Data_Structures/Segment_Tree
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
       title: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
     - icon: ':heavy_check_mark:'
@@ -35,6 +35,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Tests/Matching_on_Bipartite_Graph.test.cpp
       title: Tests/Matching_on_Bipartite_Graph.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Tests/Point_Add_Range_Sum_(Add).test.cpp
+      title: Tests/Point_Add_Range_Sum_(Add).test.cpp
     - icon: ':heavy_check_mark:'
       path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
       title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
