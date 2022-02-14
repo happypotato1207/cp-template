@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
-    title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp\"\
@@ -45,9 +42,8 @@ data:
   path: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
   requiredBy: []
   timestamp: '2022-02-14 10:43:58+08:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - Tests/Point_Add_Range_Sum_(Assign).test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
 layout: document
 redirect_from:
