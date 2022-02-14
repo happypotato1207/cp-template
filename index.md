@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: Data_Structures/Segment_Tree
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
       title: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
   - name: Data_Structures
@@ -23,7 +23,7 @@ data:
       title: Graph/DSU.hpp
   - name: Template
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Template/template.cpp
       title: Template/template.cpp
   verificationCategories:
