@@ -29,6 +29,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Header/header.cpp
       title: Header/header.cpp
+  - name: Miscellaneous
+    pages:
+    - icon: ':warning:'
+      path: Miscellaneous/LIS.hpp
+      title: Miscellaneous/LIS.hpp
   verificationCategories:
   - name: Tests
     pages:
