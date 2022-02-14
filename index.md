@@ -31,12 +31,15 @@ data:
       title: Header/header.cpp
   - name: Miscellaneous
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Miscellaneous/LIS.hpp
       title: Miscellaneous/LIS.hpp
   verificationCategories:
   - name: Tests
     pages:
+    - icon: ':heavy_check_mark:'
+      path: Tests/Longest_Increasing_Subsequence.test.cpp
+      title: Tests/Longest_Increasing_Subsequence.test.cpp
     - icon: ':heavy_check_mark:'
       path: Tests/Matching_on_Bipartite_Graph.test.cpp
       title: Tests/Matching_on_Bipartite_Graph.test.cpp

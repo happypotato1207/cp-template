@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: Tests/Longest_Increasing_Subsequence.test.cpp
+    title: Tests/Longest_Increasing_Subsequence.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Tests/Matching_on_Bipartite_Graph.test.cpp
     title: Tests/Matching_on_Bipartite_Graph.test.cpp
   - icon: ':heavy_check_mark:'
@@ -79,6 +82,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/Matching_on_Bipartite_Graph.test.cpp
+  - Tests/Longest_Increasing_Subsequence.test.cpp
   - Tests/Point_Add_Range_Sum_(Add).test.cpp
   - Tests/UnionFind.test.cpp
   - Tests/Point_Add_Range_Sum_(Assign).test.cpp

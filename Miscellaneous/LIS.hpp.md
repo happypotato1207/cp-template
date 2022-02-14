@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Tests/Longest_Increasing_Subsequence.test.cpp
+    title: Tests/Longest_Increasing_Subsequence.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Miscellaneous/LIS.hpp\"\nvector<int> LIS(vector<int> v)\
@@ -24,8 +27,9 @@ data:
   path: Miscellaneous/LIS.hpp
   requiredBy: []
   timestamp: '2022-02-14 14:36:29+08:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - Tests/Longest_Increasing_Subsequence.test.cpp
 documentation_of: Miscellaneous/LIS.hpp
 layout: document
 redirect_from:
