@@ -5,8 +5,8 @@ data:
     path: Graph/DSU.hpp
     title: Graph/DSU.hpp
   - icon: ':heavy_check_mark:'
-    path: Header/header.cpp
-    title: Header/header.cpp
+    path: header.cpp
+    title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,9 +18,9 @@ data:
     links:
     - https://judge.yosupo.jp/problem/unionfind
   bundledCode: "#line 1 \"Tests/UnionFind.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\
-    \n\n#line 1 \"Header/header.cpp\"\n#include <bits/stdc++.h>\n#define ll long long\n\
-    #define ull unsigned long long\n#define ld long double\n#define pii pair<int,\
-    \ int>\n#define pll pair<ll int, ll int>\n#define vi vector<int>\n#define vl vector<ll\
+    \n\n#line 1 \"header.cpp\"\n#include <bits/stdc++.h>\n#define ll long long\n#define\
+    \ ull unsigned long long\n#define ld long double\n#define pii pair<int, int>\n\
+    #define pll pair<ll int, ll int>\n#define vi vector<int>\n#define vl vector<ll\
     \ int>\n#define ff first\n#define ss second\n#define pb push_back\n#define eb\
     \ emplace_back\n#pragma GCC optimize(\"Ofast\")\nusing namespace std;\n// debug\
     \ template\nvoid __print(int x) {cerr << x;}\nvoid __print(long x) {cerr << x;}\n\
@@ -64,18 +64,18 @@ data:
     \ u, v;\n\t\tcin >> cmd >> u >> v;\n\t\tif (cmd == 0) {\n\t\t\tDSU.Union(u, v);\n\
     \t\t} else {\n\t\t\tcout << DSU.CheckConnected(u, v) << endl;\n\t\t}\n\t}\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include\
-    \ \"../Header/header.cpp\"\n#include \"../Graph/DSU.hpp\"\n\nvoid init() {\n\t\
-    // initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\tint n, q;\n\
-    \tcin >> n >> q;\n\tDisjointSetUnion DSU(n);\n\twhile (q--) {\n\t\tint cmd, u,\
-    \ v;\n\t\tcin >> cmd >> u >> v;\n\t\tif (cmd == 0) {\n\t\t\tDSU.Union(u, v);\n\
-    \t\t} else {\n\t\t\tcout << DSU.CheckConnected(u, v) << endl;\n\t\t}\n\t}\n}\n"
+    \ \"../header.cpp\"\n#include \"../Graph/DSU.hpp\"\n\nvoid init() {\n\t// initialize\n\
+    \n}\nvoid solve(int case_no) {\n\t// implementation\n\tint n, q;\n\tcin >> n >>\
+    \ q;\n\tDisjointSetUnion DSU(n);\n\twhile (q--) {\n\t\tint cmd, u, v;\n\t\tcin\
+    \ >> cmd >> u >> v;\n\t\tif (cmd == 0) {\n\t\t\tDSU.Union(u, v);\n\t\t} else {\n\
+    \t\t\tcout << DSU.CheckConnected(u, v) << endl;\n\t\t}\n\t}\n}\n"
   dependsOn:
-  - Header/header.cpp
+  - header.cpp
   - Graph/DSU.hpp
   isVerificationFile: true
   path: Tests/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2022-02-14 11:35:27+08:00'
+  timestamp: '2022-02-14 14:44:31+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/UnionFind.test.cpp

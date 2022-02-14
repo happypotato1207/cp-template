@@ -2,10 +2,25 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Tests/Longest_Increasing_Subsequence.test.cpp
+    title: Tests/Longest_Increasing_Subsequence.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Tests/Matching_on_Bipartite_Graph.test.cpp
+    title: Tests/Matching_on_Bipartite_Graph.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Tests/Point_Add_Range_Sum_(Add).test.cpp
+    title: Tests/Point_Add_Range_Sum_(Add).test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
+    title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Tests/UnionFind.test.cpp
+    title: Tests/UnionFind.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"header.cpp\"\n#include <bits/stdc++.h>\n#define ll long\
@@ -64,8 +79,13 @@ data:
   path: header.cpp
   requiredBy: []
   timestamp: '2022-02-14 14:42:45+08:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - Tests/Matching_on_Bipartite_Graph.test.cpp
+  - Tests/Longest_Increasing_Subsequence.test.cpp
+  - Tests/Point_Add_Range_Sum_(Add).test.cpp
+  - Tests/UnionFind.test.cpp
+  - Tests/Point_Add_Range_Sum_(Assign).test.cpp
 documentation_of: header.cpp
 layout: document
 redirect_from:

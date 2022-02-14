@@ -24,11 +24,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/DSU.hpp
       title: Graph/DSU.hpp
-  - name: Header
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: Header/header.cpp
-      title: Header/header.cpp
   - name: Miscellaneous
     pages:
     - icon: ':heavy_check_mark:'
@@ -36,7 +31,7 @@ data:
       title: Miscellaneous/LIS.hpp
   - name: .
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: header.cpp
       title: header.cpp
   verificationCategories:

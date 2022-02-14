@@ -5,8 +5,8 @@ data:
     path: Flow/Bipartite_Matching.hpp
     title: Flow/Bipartite_Matching.hpp
   - icon: ':heavy_check_mark:'
-    path: Header/header.cpp
-    title: Header/header.cpp
+    path: header.cpp
+    title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,7 +18,7 @@ data:
     links:
     - https://judge.yosupo.jp/problem/bipartitematching
   bundledCode: "#line 1 \"Tests/Matching_on_Bipartite_Graph.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/bipartitematching\"\n\n#line 1 \"Header/header.cpp\"\
+    \ \"https://judge.yosupo.jp/problem/bipartitematching\"\n\n#line 1 \"header.cpp\"\
     \n#include <bits/stdc++.h>\n#define ll long long\n#define ull unsigned long long\n\
     #define ld long double\n#define pii pair<int, int>\n#define pll pair<ll int, ll\
     \ int>\n#define vi vector<int>\n#define vl vector<ll int>\n#define ff first\n\
@@ -72,20 +72,20 @@ data:
     printf(\"%d\\n\", int(ans.size()));\n\tfor (pii x : ans) {\n\t\tprintf(\"%d %d\\\
     n\", x.ff - 1, x.ss - 1);\n\t}\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/bipartitematching\"\n\n\
-    #include \"../Header/header.cpp\"\n#include \"../Flow/Bipartite_Matching.hpp\"\
-    \n\nvoid init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
+    #include \"../header.cpp\"\n#include \"../Flow/Bipartite_Matching.hpp\"\n\nvoid\
+    \ init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
     \tint l, r, m;\n\tscanf(\"%d %d %d\", &l, &r, &m);\n\tBipartiteMatching BM(l,\
     \ r);\n\twhile (m--) {\n\t\tint u, v;\n\t\tscanf(\"%d %d\", &u, &v);\n\t\tu++;\
     \ v++;\n\t\tBM.AddEdge(u, v);\n\t}\n\tvector<pii> ans = BM.FindMatching();\n\t\
     printf(\"%d\\n\", int(ans.size()));\n\tfor (pii x : ans) {\n\t\tprintf(\"%d %d\\\
     n\", x.ff - 1, x.ss - 1);\n\t}\n}\n"
   dependsOn:
-  - Header/header.cpp
+  - header.cpp
   - Flow/Bipartite_Matching.hpp
   isVerificationFile: true
   path: Tests/Matching_on_Bipartite_Graph.test.cpp
   requiredBy: []
-  timestamp: '2022-02-14 11:35:14+08:00'
+  timestamp: '2022-02-14 14:43:55+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Matching_on_Bipartite_Graph.test.cpp

@@ -5,8 +5,8 @@ data:
     path: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
     title: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
   - icon: ':heavy_check_mark:'
-    path: Header/header.cpp
-    title: Header/header.cpp
+    path: header.cpp
+    title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,7 +18,7 @@ data:
     links:
     - https://judge.yosupo.jp/problem/point_add_range_sum
   bundledCode: "#line 1 \"Tests/Point_Add_Range_Sum_(Add).test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\n#line 1 \"Header/header.cpp\"\
+    \ \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\n#line 1 \"header.cpp\"\
     \n#include <bits/stdc++.h>\n#define ll long long\n#define ull unsigned long long\n\
     #define ld long double\n#define pii pair<int, int>\n#define pll pair<ll int, ll\
     \ int>\n#define vi vector<int>\n#define vl vector<ll int>\n#define ff first\n\
@@ -66,7 +66,7 @@ data:
     ST.Update(ptr, new_val);\n\t\t} else {\n\t\t\tint x, y;\n\t\t\tcin >> x >> y;\n\
     \t\t\tcout << ST.Query(x, y - 1).val << endl;\n\t\t}\n\t}\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
-    \n#include \"../Header/header.cpp\"\n#include \"../Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp\"\
+    \n#include \"../header.cpp\"\n#include \"../Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp\"\
     \n\nvoid init() {\n\t\n}\nvoid solve(int case_no) {\n\tint n, q;\n\tcin >> n >>\
     \ q;\n\tvector<Data> v(n);\n\tfor (int i = 0; i < n; i++) cin >> v[i].val;\n\t\
     SegmentTree_PointAddRangeSum ST(v);\n\twhile (q--) {\n\t\tint cmd;\n\t\tcin >>\
@@ -75,12 +75,12 @@ data:
     \ x, y;\n\t\t\tcin >> x >> y;\n\t\t\tcout << ST.Query(x, y - 1).val << endl;\n\
     \t\t}\n\t}\n}\n"
   dependsOn:
-  - Header/header.cpp
+  - header.cpp
   - Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
   isVerificationFile: true
   path: Tests/Point_Add_Range_Sum_(Add).test.cpp
   requiredBy: []
-  timestamp: '2022-02-14 13:54:27+08:00'
+  timestamp: '2022-02-14 14:44:05+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Point_Add_Range_Sum_(Add).test.cpp
