@@ -1,7 +1,7 @@
 struct Data {
 	long long int val = 0;
 };
-class SegmentTree {
+class SegmentTree_PointAssignRangeSum {
 public:
 	SegmentTree(vector<Data> v) {
 		arr = v;
