@@ -1,9 +1,9 @@
 struct Data {
 	long long int val = 0;
 };
-class SegmentTree_PointAssignRangeSum {
+class SegmentTree_PointAddRangeSum {
 public:
-	SegmentTree_PointAssignRangeSum(vector<Data> v) {
+	SegmentTree_PointAddRangeSum(vector<Data> v) {
 		arr = v;
 		n = arr.size();
 		seg.resize((n << 1));
