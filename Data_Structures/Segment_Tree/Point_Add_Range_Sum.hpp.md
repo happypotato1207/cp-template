@@ -9,8 +9,8 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp\"\n\
-    struct Data {\n\tlong long int val = 0;\n};\nclass SegmentTree_PointAssignRangeSum\
-    \ {\npublic:\n\tSegmentTree_PointAssignRangeSum(vector<Data> v) {\n\t\tarr = v;\n\
+    struct Data {\n\tlong long int val = 0;\n};\nclass SegmentTree_PointAddRangeSum\
+    \ {\npublic:\n\tSegmentTree_PointAddRangeSum(vector<Data> v) {\n\t\tarr = v;\n\
     \t\tn = arr.size();\n\t\tseg.resize((n << 1));\n\t\tBuild();\n\t}\n\tvoid Build()\
     \ {\n\t\tfor (int i = 0; i < n; i++) seg[i + n] = arr[i];\n\t\tfor (int i = n\
     \ - 1; i > 0; i--) seg[i] = Combine(seg[(i << 1)], seg[((i << 1) | 1)]);\n\t}\n\
@@ -23,8 +23,8 @@ data:
     \tvector<Data> arr;\n\tvector<Data> seg;\n\tData combine_ret;\n\tData Combine(Data\
     \ x, Data y) { // remember to assign everything, not add\n\t\tcombine_ret.val\
     \ = x.val + y.val;\n\t\treturn combine_ret;\n\t}\n};\n"
-  code: "struct Data {\n\tlong long int val = 0;\n};\nclass SegmentTree_PointAssignRangeSum\
-    \ {\npublic:\n\tSegmentTree_PointAssignRangeSum(vector<Data> v) {\n\t\tarr = v;\n\
+  code: "struct Data {\n\tlong long int val = 0;\n};\nclass SegmentTree_PointAddRangeSum\
+    \ {\npublic:\n\tSegmentTree_PointAddRangeSum(vector<Data> v) {\n\t\tarr = v;\n\
     \t\tn = arr.size();\n\t\tseg.resize((n << 1));\n\t\tBuild();\n\t}\n\tvoid Build()\
     \ {\n\t\tfor (int i = 0; i < n; i++) seg[i + n] = arr[i];\n\t\tfor (int i = n\
     \ - 1; i > 0; i--) seg[i] = Combine(seg[(i << 1)], seg[((i << 1) | 1)]);\n\t}\n\
@@ -41,7 +41,7 @@ data:
   isVerificationFile: false
   path: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
   requiredBy: []
-  timestamp: '2022-02-14 13:53:06+08:00'
+  timestamp: '2022-02-14 13:53:18+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
