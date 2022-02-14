@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
 
-#include "../Template/template.cpp"
+#include "../Header/header.cpp"
 #include "../Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp"
 
 void init() {
