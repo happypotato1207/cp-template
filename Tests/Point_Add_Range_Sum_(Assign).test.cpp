@@ -11,7 +11,7 @@ void solve(int case_no) {
 	cin >> n >> q;
 	vector<Data> v(n);
 	for (int i = 0; i < n; i++) cin >> v[i].val;
-	SegmentTree ST(v);
+	SegmentTree_PointAssignRangeSum ST(v);
 	while (q--) {
 		int cmd;
 		cin >> cmd;
