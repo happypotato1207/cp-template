@@ -6,15 +6,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: Tests/Matching_on_Bipartite_Graph.test.cpp
     title: Tests/Matching_on_Bipartite_Graph.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
     title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
   - icon: ':heavy_check_mark:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Header/header.cpp\"\n#include <bits/stdc++.h>\n#define ll\
@@ -73,7 +73,7 @@ data:
   path: Header/header.cpp
   requiredBy: []
   timestamp: '2022-02-14 11:34:42+08:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/Matching_on_Bipartite_Graph.test.cpp
   - Tests/UnionFind.test.cpp
