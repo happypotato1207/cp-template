@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
-#include "../Header/header.cpp"
+#include "../header.cpp"
 #include "../Graph/DSU.hpp"
 
 void init() {
