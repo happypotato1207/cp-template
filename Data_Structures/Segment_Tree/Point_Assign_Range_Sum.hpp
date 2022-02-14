@@ -3,7 +3,7 @@ struct Data {
 };
 class SegmentTree_PointAssignRangeSum {
 public:
-	SegmentTree(vector<Data> v) {
+	SegmentTree_PointAssignRangeSum(vector<Data> v) {
 		arr = v;
 		n = arr.size();
 		seg.resize((n << 1));
