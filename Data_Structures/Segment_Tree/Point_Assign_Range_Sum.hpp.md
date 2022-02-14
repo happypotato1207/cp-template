@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':x:'
-    path: Tests/Point_Add_Range_Sum.test.cpp
-    title: Tests/Point_Add_Range_Sum.test.cpp
+    path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
+    title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
   _verificationStatusIcon: ':x:'
@@ -47,7 +47,7 @@ data:
   timestamp: '2022-02-14 10:43:58+08:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - Tests/Point_Add_Range_Sum.test.cpp
+  - Tests/Point_Add_Range_Sum_(Assign).test.cpp
 documentation_of: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
 layout: document
 redirect_from:

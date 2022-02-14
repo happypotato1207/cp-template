@@ -17,8 +17,8 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
     links:
     - https://judge.yosupo.jp/problem/point_add_range_sum
-  bundledCode: "#line 1 \"Tests/Point_Add_Range_Sum.test.cpp\"\n#define PROBLEM \"\
-    https://judge.yosupo.jp/problem/point_add_range_sum\"\n\n#line 1 \"Template/template.cpp\"\
+  bundledCode: "#line 1 \"Tests/Point_Add_Range_Sum_(Assign).test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\n#line 1 \"Template/template.cpp\"\
     \n#include <bits/stdc++.h>\n#define ll long long\n#define ull unsigned long long\n\
     #define ld long double\n#define pii pair<int, int>\n#define pll pair<ll int, ll\
     \ int>\n#define vi vector<int>\n#define vl vector<ll int>\n#define ff first\n\
@@ -58,11 +58,11 @@ data:
     protected:\n\tint n;\n\tvector<Data> arr;\n\tvector<Data> seg;\n\tData combine_ret;\n\
     \tData Combine(Data x, Data y) { // remember to assign everything, not add\n\t\
     \tcombine_ret.val = x.val + y.val;\n\t\treturn combine_ret;\n\t}\n};\n#line 5\
-    \ \"Tests/Point_Add_Range_Sum.test.cpp\"\n\nvoid init() {\n\t\n}\nvoid solve(int\
-    \ case_no) {\n\tint n, q;\n\tcin >> n >> q;\n\tvector<Data> v(n);\n\tfor (int\
-    \ i = 0; i < n; i++) cin >> v[i].val;\n\tSegmentTree ST(v);\n\twhile (q--) {\n\
-    \t\tint cmd;\n\t\tcin >> cmd;\n\t\tif (cmd == 0) {\n\t\t\tData new_val;\n\t\t\t\
-    int ptr;\n\t\t\tcin >> ptr >> new_val.val;\n\t\t\tnew_val.val += v[ptr].val;\n\
+    \ \"Tests/Point_Add_Range_Sum_(Assign).test.cpp\"\n\nvoid init() {\n\t\n}\nvoid\
+    \ solve(int case_no) {\n\tint n, q;\n\tcin >> n >> q;\n\tvector<Data> v(n);\n\t\
+    for (int i = 0; i < n; i++) cin >> v[i].val;\n\tSegmentTree ST(v);\n\twhile (q--)\
+    \ {\n\t\tint cmd;\n\t\tcin >> cmd;\n\t\tif (cmd == 0) {\n\t\t\tData new_val;\n\
+    \t\t\tint ptr;\n\t\t\tcin >> ptr >> new_val.val;\n\t\t\tnew_val.val += v[ptr].val;\n\
     \t\t\tv[ptr] = new_val;\n\t\t\tST.Update(ptr, new_val);\n\t\t} else {\n\t\t\t\
     int x, y;\n\t\t\tcin >> x >> y;\n\t\t\tcout << ST.Query(x, y - 1).val << endl;\n\
     \t\t}\n\t}\n}\n"
@@ -79,15 +79,15 @@ data:
   - Template/template.cpp
   - Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
   isVerificationFile: true
-  path: Tests/Point_Add_Range_Sum.test.cpp
+  path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
   requiredBy: []
-  timestamp: '2022-02-14 10:45:03+08:00'
+  timestamp: '2022-02-14 10:45:44+08:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: Tests/Point_Add_Range_Sum.test.cpp
+documentation_of: Tests/Point_Add_Range_Sum_(Assign).test.cpp
 layout: document
 redirect_from:
-- /verify/Tests/Point_Add_Range_Sum.test.cpp
-- /verify/Tests/Point_Add_Range_Sum.test.cpp.html
-title: Tests/Point_Add_Range_Sum.test.cpp
+- /verify/Tests/Point_Add_Range_Sum_(Assign).test.cpp
+- /verify/Tests/Point_Add_Range_Sum_(Assign).test.cpp.html
+title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
 ---

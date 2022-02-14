@@ -7,8 +7,8 @@ data:
     path: Tests/Matching_on_Bipartite_Graph.test.cpp
     title: Tests/Matching_on_Bipartite_Graph.test.cpp
   - icon: ':x:'
-    path: Tests/Point_Add_Range_Sum.test.cpp
-    title: Tests/Point_Add_Range_Sum.test.cpp
+    path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
+    title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
   - icon: ':heavy_check_mark:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
@@ -77,7 +77,7 @@ data:
   verifiedWith:
   - Tests/Matching_on_Bipartite_Graph.test.cpp
   - Tests/UnionFind.test.cpp
-  - Tests/Point_Add_Range_Sum.test.cpp
+  - Tests/Point_Add_Range_Sum_(Assign).test.cpp
 documentation_of: Template/template.cpp
 layout: document
 redirect_from:
