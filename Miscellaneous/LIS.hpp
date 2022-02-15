@@ -1,13 +1,12 @@
-vector<int> LIS(vector<int> v) {
-	int n = v.size();
-	vector<int> ret;
-	ret.push_back(v[0]);
-	for (int i = 1; i < n; i++) {
-		if (v[i] > ret.back()) ret.push_back(v[i]); // change to >= for non-decreasing
-		else {
-			int index = lower_bound(ret.begin(), ret.end(), v[i]) - ret.begin();
-			ret[index] = v[i];
+vector<int> LIS(vector<int> arr, bool strict = true) {
+	vector<int> sub;
+	for (int x : arr) {
+		if (sub.empty() || sub[sub.size() - 1] < x || (!strict && sub[sub.size() - 1] == x)) { // Append to LIS if new element is >=/> last element in LIS
+			sub.push_back(x);
+		} else {
+			int idx = lower_bound(sub.begin(), sub.end(), x + (!strict)) - sub.begin(); // Find the index of the smallest number >/>= x
+			sub[idx] = x;
 		}
 	}
-	return ret;
+	return sub;
 }
