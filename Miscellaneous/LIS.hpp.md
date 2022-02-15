@@ -11,22 +11,24 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Miscellaneous/LIS.hpp\"\nvector<int> LIS(vector<int> v)\
-    \ {\n\tint n = v.size();\n\tvector<int> ret;\n\tret.push_back(v[0]);\n\tfor (int\
-    \ i = 1; i < n; i++) {\n\t\tif (v[i] > ret.back()) ret.push_back(v[i]); // change\
-    \ to >= for non-decreasing\n\t\telse {\n\t\t\tint index = lower_bound(ret.begin(),\
-    \ ret.end(), v[i]) - ret.begin();\n\t\t\tret[index] = v[i];\n\t\t}\n\t}\n\treturn\
-    \ ret;\n}\n"
-  code: "vector<int> LIS(vector<int> v) {\n\tint n = v.size();\n\tvector<int> ret;\n\
-    \tret.push_back(v[0]);\n\tfor (int i = 1; i < n; i++) {\n\t\tif (v[i] > ret.back())\
-    \ ret.push_back(v[i]); // change to >= for non-decreasing\n\t\telse {\n\t\t\t\
-    int index = lower_bound(ret.begin(), ret.end(), v[i]) - ret.begin();\n\t\t\tret[index]\
-    \ = v[i];\n\t\t}\n\t}\n\treturn ret;\n}\n"
+  bundledCode: "#line 1 \"Miscellaneous/LIS.hpp\"\nvector<int> LIS(vector<int> arr,\
+    \ bool strict = true) {\n\tvector<int> sub;\n\tfor (int x : arr) {\n\t\tif (sub.empty()\
+    \ || sub[sub.size() - 1] < x || (!strict && sub[sub.size() - 1] == x)) { // Append\
+    \ to LIS if new element is >=/> last element in LIS\n\t\t\tsub.push_back(x);\n\
+    \t\t} else {\n\t\t\tint idx = lower_bound(sub.begin(), sub.end(), x + (!strict))\
+    \ - sub.begin(); // Find the index of the smallest number >/>= x\n\t\t\tsub[idx]\
+    \ = x;\n\t\t}\n\t}\n\treturn sub;\n}\n"
+  code: "vector<int> LIS(vector<int> arr, bool strict = true) {\n\tvector<int> sub;\n\
+    \tfor (int x : arr) {\n\t\tif (sub.empty() || sub[sub.size() - 1] < x || (!strict\
+    \ && sub[sub.size() - 1] == x)) { // Append to LIS if new element is >=/> last\
+    \ element in LIS\n\t\t\tsub.push_back(x);\n\t\t} else {\n\t\t\tint idx = lower_bound(sub.begin(),\
+    \ sub.end(), x + (!strict)) - sub.begin(); // Find the index of the smallest number\
+    \ >/>= x\n\t\t\tsub[idx] = x;\n\t\t}\n\t}\n\treturn sub;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: Miscellaneous/LIS.hpp
   requiredBy: []
-  timestamp: '2022-02-14 14:36:29+08:00'
+  timestamp: '2022-02-15 22:30:36+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/Longest_Increasing_Subsequence.test.cpp

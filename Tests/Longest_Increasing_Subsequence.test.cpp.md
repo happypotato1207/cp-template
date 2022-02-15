@@ -44,15 +44,16 @@ data:
     void init();\nvoid solve(int case_no);\nsigned main() {\n\tios::sync_with_stdio(false);\n\
     \tcin.tie(NULL);\n\tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t\
     \ = 1;\n//\tcin >> t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n*/\n\
-    #line 1 \"Miscellaneous/LIS.hpp\"\nvector<int> LIS(vector<int> v) {\n\tint n =\
-    \ v.size();\n\tvector<int> ret;\n\tret.push_back(v[0]);\n\tfor (int i = 1; i <\
-    \ n; i++) {\n\t\tif (v[i] > ret.back()) ret.push_back(v[i]); // change to >= for\
-    \ non-decreasing\n\t\telse {\n\t\t\tint index = lower_bound(ret.begin(), ret.end(),\
-    \ v[i]) - ret.begin();\n\t\t\tret[index] = v[i];\n\t\t}\n\t}\n\treturn ret;\n\
-    }\n#line 5 \"Tests/Longest_Increasing_Subsequence.test.cpp\"\n\nvoid init() {\n\
-    \t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\tint n;\n\
-    \tcin >> n;\n\tvector<int> v(n);\n\tfor (int i = 0; i < n; i++) cin >> v[i];\n\
-    \tcout << LIS(v).size() << endl;\n}\n"
+    #line 1 \"Miscellaneous/LIS.hpp\"\nvector<int> LIS(vector<int> arr, bool strict\
+    \ = true) {\n\tvector<int> sub;\n\tfor (int x : arr) {\n\t\tif (sub.empty() ||\
+    \ sub[sub.size() - 1] < x || (!strict && sub[sub.size() - 1] == x)) { // Append\
+    \ to LIS if new element is >=/> last element in LIS\n\t\t\tsub.push_back(x);\n\
+    \t\t} else {\n\t\t\tint idx = lower_bound(sub.begin(), sub.end(), x + (!strict))\
+    \ - sub.begin(); // Find the index of the smallest number >/>= x\n\t\t\tsub[idx]\
+    \ = x;\n\t\t}\n\t}\n\treturn sub;\n}\n#line 5 \"Tests/Longest_Increasing_Subsequence.test.cpp\"\
+    \n\nvoid init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
+    \tint n;\n\tcin >> n;\n\tvector<int> v(n);\n\tfor (int i = 0; i < n; i++) cin\
+    \ >> v[i];\n\tcout << LIS(v).size() << endl;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D\"\n\n\
     #include \"../header.cpp\"\n#include \"../Miscellaneous/LIS.hpp\"\n\nvoid init()\
     \ {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\t\
@@ -64,7 +65,7 @@ data:
   isVerificationFile: true
   path: Tests/Longest_Increasing_Subsequence.test.cpp
   requiredBy: []
-  timestamp: '2022-02-14 14:43:01+08:00'
+  timestamp: '2022-02-15 22:30:36+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Longest_Increasing_Subsequence.test.cpp
