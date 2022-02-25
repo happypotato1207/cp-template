@@ -35,21 +35,21 @@ void _print() {cerr << "]\n";}
 template <typename T, typename... V>
 void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
 #ifndef ONLINE_JUDGE
-#define debug(x...) cerr << "[" << #x << "] = ["; _print(x)
+#define debug(...) cerr << "[" << #__VA_ARGS__ << "] = ["; _print(__VA_ARGS__)
 #else
-#define debug(x...)
+#define debug(...)
 #endif
 //
-void yes() {
-	cout << "YES\n";
+inline void yes() {
+	cout << "YES" << endl;
 	return;
 }
-void no() {
-	cout << "NO\n";
+inline void no() {
+	cout << "NO" << endl;
 	return;
 }
 template <class T>
-void out(T temp) {
+inline void out(T temp) {
 	cout << temp << endl;
 	return;
 }
@@ -57,15 +57,19 @@ void out(T temp) {
 void init();
 void solve(int case_no);
 signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    #endif
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
 	srand(time(NULL));
 	init();
 	int t = 1;
-//	cin >> t;
+	// cin >> t;
 	for (int i = 1; i <= t; i++) solve(i);
 }
 /*
  *
-*/
+ */
