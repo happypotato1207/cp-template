@@ -24,6 +24,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/DSU.hpp
       title: Graph/DSU.hpp
+  - name: Graph/MST
+    pages:
+    - icon: ':warning:'
+      path: Graph/MST/Kruskal.hpp
+      title: Graph/MST/Kruskal.hpp
   - name: Miscellaneous
     pages:
     - icon: ':heavy_check_mark:'
