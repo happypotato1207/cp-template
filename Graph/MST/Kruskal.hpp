@@ -1,4 +1,4 @@
-#include "DSU.hpp"
+#include "../Graph/DSU.hpp"
 
 struct edge {
     int u, v;
