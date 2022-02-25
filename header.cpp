@@ -54,8 +54,10 @@ inline void out(T temp) {
 	return;
 }
 // global variables
+
 void init();
 void solve(int case_no);
+
 signed main() {
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
