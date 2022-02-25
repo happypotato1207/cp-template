@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Miscellaneous/LIS.hpp
     title: Miscellaneous/LIS.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: header.cpp
     title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D
@@ -37,20 +37,22 @@ data:
     \ for (auto &i: x) cerr << (f++ ? \",\" : \"\"), __print(i); cerr << \"}\";}\n\
     void _print() {cerr << \"]\\n\";}\ntemplate <typename T, typename... V>\nvoid\
     \ _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << \", \"; _print(v...);}\n\
-    #ifndef ONLINE_JUDGE\n#define debug(x...) cerr << \"[\" << #x << \"] = [\"; _print(x)\n\
-    #else\n#define debug(x...)\n#endif\n//\nvoid yes() {\n\tcout << \"YES\\n\";\n\t\
-    return;\n}\nvoid no() {\n\tcout << \"NO\\n\";\n\treturn;\n}\ntemplate <class T>\n\
-    void out(T temp) {\n\tcout << temp << endl;\n\treturn;\n}\n// global variables\n\
-    void init();\nvoid solve(int case_no);\nsigned main() {\n\tios::sync_with_stdio(false);\n\
-    \tcin.tie(NULL);\n\tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t\
-    \ = 1;\n//\tcin >> t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n*/\n\
-    #line 1 \"Miscellaneous/LIS.hpp\"\nvector<int> LIS(vector<int> arr, bool strict\
-    \ = true) {\n\tvector<int> sub;\n\tfor (int x : arr) {\n\t\tif (sub.empty() ||\
-    \ sub[sub.size() - 1] < x || (!strict && sub[sub.size() - 1] == x)) { // Append\
-    \ to LIS if new element is >=/> last element in LIS\n\t\t\tsub.push_back(x);\n\
-    \t\t} else {\n\t\t\tint idx = lower_bound(sub.begin(), sub.end(), x + (!strict))\
-    \ - sub.begin(); // Find the index of the smallest number >/>= x\n\t\t\tsub[idx]\
-    \ = x;\n\t\t}\n\t}\n\treturn sub;\n}\n#line 5 \"Tests/Longest_Increasing_Subsequence.test.cpp\"\
+    #ifndef ONLINE_JUDGE\n#define debug(...) cerr << \"[\" << #__VA_ARGS__ << \"]\
+    \ = [\"; _print(__VA_ARGS__)\n#else\n#define debug(...)\n#endif\n//\ninline void\
+    \ yes() {\n\tcout << \"YES\" << endl;\n\treturn;\n}\ninline void no() {\n\tcout\
+    \ << \"NO\" << endl;\n\treturn;\n}\ntemplate <class T>\ninline void out(T temp)\
+    \ {\n\tcout << temp << endl;\n\treturn;\n}\n// global variables\n\nvoid init();\n\
+    void solve(int case_no);\n\nsigned main() {\n    #ifndef ONLINE_JUDGE\n    freopen(\"\
+    input.txt\", \"r\", stdin);\n    // freopen(\"output.txt\", \"w\", stdout);\n\
+    \    #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\tcout.tie(NULL);\n\
+    \tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >> t;\n\tfor (int i =\
+    \ 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Miscellaneous/LIS.hpp\"\
+    \nvector<int> LIS(vector<int> arr, bool strict = true) {\n\tvector<int> sub;\n\
+    \tfor (int x : arr) {\n\t\tif (sub.empty() || sub[sub.size() - 1] < x || (!strict\
+    \ && sub[sub.size() - 1] == x)) { // Append to LIS if new element is >=/> last\
+    \ element in LIS\n\t\t\tsub.push_back(x);\n\t\t} else {\n\t\t\tint idx = lower_bound(sub.begin(),\
+    \ sub.end(), x + (!strict)) - sub.begin(); // Find the index of the smallest number\
+    \ >/>= x\n\t\t\tsub[idx] = x;\n\t\t}\n\t}\n\treturn sub;\n}\n#line 5 \"Tests/Longest_Increasing_Subsequence.test.cpp\"\
     \n\nvoid init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
     \tint n;\n\tcin >> n;\n\tvector<int> v(n);\n\tfor (int i = 0; i < n; i++) cin\
     \ >> v[i];\n\tcout << LIS(v).size() << endl;\n}\n"
@@ -65,8 +67,8 @@ data:
   isVerificationFile: true
   path: Tests/Longest_Increasing_Subsequence.test.cpp
   requiredBy: []
-  timestamp: '2022-02-15 22:30:36+08:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-02-26 00:12:47+08:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Tests/Longest_Increasing_Subsequence.test.cpp
 layout: document

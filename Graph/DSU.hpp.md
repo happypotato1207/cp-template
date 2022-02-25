@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/DSU.hpp\"\nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int\
@@ -48,7 +48,7 @@ data:
   path: Graph/DSU.hpp
   requiredBy: []
   timestamp: '2022-02-22 21:14:29+08:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Tests/UnionFind.test.cpp
 documentation_of: Graph/DSU.hpp

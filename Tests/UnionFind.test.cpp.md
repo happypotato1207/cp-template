@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Graph/DSU.hpp
     title: Graph/DSU.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: header.cpp
     title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/unionfind
@@ -36,21 +36,24 @@ data:
     \ T &x) {int f = 0; cerr << '{'; for (auto &i: x) cerr << (f++ ? \",\" : \"\"\
     ), __print(i); cerr << \"}\";}\nvoid _print() {cerr << \"]\\n\";}\ntemplate <typename\
     \ T, typename... V>\nvoid _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr\
-    \ << \", \"; _print(v...);}\n#ifndef ONLINE_JUDGE\n#define debug(x...) cerr <<\
-    \ \"[\" << #x << \"] = [\"; _print(x)\n#else\n#define debug(x...)\n#endif\n//\n\
-    void yes() {\n\tcout << \"YES\\n\";\n\treturn;\n}\nvoid no() {\n\tcout << \"NO\\\
-    n\";\n\treturn;\n}\ntemplate <class T>\nvoid out(T temp) {\n\tcout << temp <<\
-    \ endl;\n\treturn;\n}\n// global variables\nvoid init();\nvoid solve(int case_no);\n\
-    signed main() {\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\tcout.tie(NULL);\n\
-    \tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n//\tcin >> t;\n\tfor (int i = 1;\
-    \ i <= t; i++) solve(i);\n}\n/*\n *\n*/\n#line 1 \"Graph/DSU.hpp\"\nclass DisjointSetUnion\
-    \ {\npublic:\n\tDisjointSetUnion(int n, bool directed_temp = false, bool path_compression_temp\
-    \ = true) {\n\t\tparent.resize(n + 1, -1);\n\t\trank.resize(n + 1, 1);\n\t\tsize.resize(n\
-    \ + 1, 1);\n\t\tdirected = directed_temp;\n\t\tpath_compression = path_compression_temp;\n\
-    \t}\n\tint FindRoot(int u) {\n\t\tif (parent[u] == -1) return u;\n\t\tif (path_compression)\
-    \ return parent[u] = FindRoot(parent[u]);\n\t\telse return FindRoot(parent[u]);\n\
-    \t}\n\tbool Union(int u, int v) { // if directed then assign u -> v\n\t\tu = FindRoot(u);\n\
-    \t\tv = FindRoot(v);\n\t\tif (u != v) {\n\t\t\tif (!directed) {\n\t\t\t\tif (rank[u]\
+    \ << \", \"; _print(v...);}\n#ifndef ONLINE_JUDGE\n#define debug(...) cerr <<\
+    \ \"[\" << #__VA_ARGS__ << \"] = [\"; _print(__VA_ARGS__)\n#else\n#define debug(...)\n\
+    #endif\n//\ninline void yes() {\n\tcout << \"YES\" << endl;\n\treturn;\n}\ninline\
+    \ void no() {\n\tcout << \"NO\" << endl;\n\treturn;\n}\ntemplate <class T>\ninline\
+    \ void out(T temp) {\n\tcout << temp << endl;\n\treturn;\n}\n// global variables\n\
+    \nvoid init();\nvoid solve(int case_no);\n\nsigned main() {\n    #ifndef ONLINE_JUDGE\n\
+    \    freopen(\"input.txt\", \"r\", stdin);\n    // freopen(\"output.txt\", \"\
+    w\", stdout);\n    #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\t\
+    cout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >> t;\n\
+    \tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Graph/DSU.hpp\"\
+    \nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int n, bool directed_temp\
+    \ = false, bool path_compression_temp = true) {\n\t\tparent.resize(n + 1, -1);\n\
+    \t\trank.resize(n + 1, 1);\n\t\tsize.resize(n + 1, 1);\n\t\tdirected = directed_temp;\n\
+    \t\tpath_compression = path_compression_temp;\n\t}\n\tint FindRoot(int u) {\n\t\
+    \tif (parent[u] == -1) return u;\n\t\tif (path_compression) return parent[u] =\
+    \ FindRoot(parent[u]);\n\t\telse return FindRoot(parent[u]);\n\t}\n\tbool Union(int\
+    \ u, int v) { // if directed then assign u -> v\n\t\tu = FindRoot(u);\n\t\tv =\
+    \ FindRoot(v);\n\t\tif (u != v) {\n\t\t\tif (!directed) {\n\t\t\t\tif (rank[u]\
     \ < rank[v]) swap(u, v);\n\t\t\t}\n\t\t\tparent[u] = v;\n\t\t\trank[u] = rank[v]\
     \ + 1;\n\t\t\tsize[v] += size[u];\n\t\t\treturn true;\n\t\t}\n\t\treturn false;\n\
     \t}\n\tbool CheckConnected(int u, int v) {\n\t\treturn (FindRoot(u) == FindRoot(v));\n\
@@ -75,8 +78,8 @@ data:
   isVerificationFile: true
   path: Tests/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2022-02-22 21:14:29+08:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-02-26 00:12:47+08:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Tests/UnionFind.test.cpp
 layout: document
