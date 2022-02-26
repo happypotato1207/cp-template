@@ -2,16 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: Tests/Point_Add_Range_Sum_(Add).test.cpp
-    title: Tests/Point_Add_Range_Sum_(Add).test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp\"\n\
+  bundledCode: "#line 1 \"Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp\"\n\
     struct Data {\n\tlong long int val = 0;\n};\nclass SegmentTree_PointAddRangeSum\
     \ {\npublic:\n\tSegmentTree_PointAddRangeSum(vector<Data> v) {\n\t\tarr = v;\n\
     \t\tn = arr.size();\n\t\tseg.resize((n << 1));\n\t\tBuild();\n\t}\n\tvoid Build()\
@@ -42,16 +39,15 @@ data:
     \ = x.val + y.val;\n\t\treturn combine_ret;\n\t}\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
+  path: Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp
   requiredBy: []
-  timestamp: '2022-02-14 13:53:18+08:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - Tests/Point_Add_Range_Sum_(Add).test.cpp
-documentation_of: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
+  timestamp: '2022-02-27 00:22:03+08:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp
 layout: document
 redirect_from:
-- /library/Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
-- /library/Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp.html
-title: Data_Structures/Segment_Tree/Point_Add_Range_Sum.hpp
+- /library/Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp
+- /library/Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp.html
+title: Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp
 ---
