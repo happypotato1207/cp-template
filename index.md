@@ -10,13 +10,11 @@ data:
       path: Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp
       title: Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp
     - icon: ':warning:'
+      path: Data_Structures/Segment_Tree_Point_Assign_Range_Sum.hpp
+      title: Data_Structures/Segment_Tree_Point_Assign_Range_Sum.hpp
+    - icon: ':warning:'
       path: Data_Structures/Sparse_Table.hpp
       title: Data_Structures/Sparse_Table.hpp
-  - name: Data_Structures/Segment_Tree
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
-      title: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
   - name: Flow
     pages:
     - icon: ':heavy_check_mark:'
@@ -52,7 +50,7 @@ data:
     - icon: ':x:'
       path: Tests/Point_Add_Range_Sum_(Add).test.cpp
       title: Tests/Point_Add_Range_Sum_(Add).test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
       title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
     - icon: ':heavy_check_mark:'
