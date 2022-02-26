@@ -3,24 +3,24 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Longest_Increasing_Subsequence.test.cpp
     title: Tests/Longest_Increasing_Subsequence.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Matching_on_Bipartite_Graph.test.cpp
     title: Tests/Matching_on_Bipartite_Graph.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Point_Add_Range_Sum_(Add).test.cpp
     title: Tests/Point_Add_Range_Sum_(Add).test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
     title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"header.cpp\"\n#include <bits/stdc++.h>\n#define ll long\
@@ -46,11 +46,11 @@ data:
     #endif\n//\ninline void yes() {\n\tcout << \"YES\" << endl;\n\treturn;\n}\ninline\
     \ void no() {\n\tcout << \"NO\" << endl;\n\treturn;\n}\ntemplate <class T>\ninline\
     \ void out(T temp) {\n\tcout << temp << endl;\n\treturn;\n}\n// global variables\n\
-    \nvoid init();\nvoid solve(int case_no);\n\nsigned main() {\n    #ifndef ONLINE_JUDGE\n\
-    \    freopen(\"input.txt\", \"r\", stdin);\n    // freopen(\"output.txt\", \"\
-    w\", stdout);\n    #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\t\
-    cout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >> t;\n\
-    \tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n"
+    \nvoid init();\nvoid solve(int case_no);\n\nsigned main() {\n//     #ifndef ONLINE_JUDGE\n\
+    //     freopen(\"input.txt\", \"r\", stdin);\n//     // freopen(\"output.txt\"\
+    , \"w\", stdout);\n//     #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
+    \tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >>\
+    \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n"
   code: "#include <bits/stdc++.h>\n#define ll long long\n#define ull unsigned long\
     \ long\n#define ld long double\n#define pii pair<int, int>\n#define pll pair<ll\
     \ int, ll int>\n#define vi vector<int>\n#define vl vector<ll int>\n#define ff\
@@ -74,17 +74,17 @@ data:
     \ yes() {\n\tcout << \"YES\" << endl;\n\treturn;\n}\ninline void no() {\n\tcout\
     \ << \"NO\" << endl;\n\treturn;\n}\ntemplate <class T>\ninline void out(T temp)\
     \ {\n\tcout << temp << endl;\n\treturn;\n}\n// global variables\n\nvoid init();\n\
-    void solve(int case_no);\n\nsigned main() {\n    #ifndef ONLINE_JUDGE\n    freopen(\"\
-    input.txt\", \"r\", stdin);\n    // freopen(\"output.txt\", \"w\", stdout);\n\
-    \    #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\tcout.tie(NULL);\n\
-    \tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >> t;\n\tfor (int i =\
-    \ 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n"
+    void solve(int case_no);\n\nsigned main() {\n//     #ifndef ONLINE_JUDGE\n// \
+    \    freopen(\"input.txt\", \"r\", stdin);\n//     // freopen(\"output.txt\",\
+    \ \"w\", stdout);\n//     #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
+    \tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >>\
+    \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n"
   dependsOn: []
   isVerificationFile: false
   path: header.cpp
   requiredBy: []
-  timestamp: '2022-02-26 00:12:47+08:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2022-02-26 22:50:04+08:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/Matching_on_Bipartite_Graph.test.cpp
   - Tests/Longest_Increasing_Subsequence.test.cpp

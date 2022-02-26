@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
     title: Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: header.cpp
     title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
@@ -42,11 +42,11 @@ data:
     \ yes() {\n\tcout << \"YES\" << endl;\n\treturn;\n}\ninline void no() {\n\tcout\
     \ << \"NO\" << endl;\n\treturn;\n}\ntemplate <class T>\ninline void out(T temp)\
     \ {\n\tcout << temp << endl;\n\treturn;\n}\n// global variables\n\nvoid init();\n\
-    void solve(int case_no);\n\nsigned main() {\n    #ifndef ONLINE_JUDGE\n    freopen(\"\
-    input.txt\", \"r\", stdin);\n    // freopen(\"output.txt\", \"w\", stdout);\n\
-    \    #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\tcout.tie(NULL);\n\
-    \tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >> t;\n\tfor (int i =\
-    \ 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp\"\
+    void solve(int case_no);\n\nsigned main() {\n//     #ifndef ONLINE_JUDGE\n// \
+    \    freopen(\"input.txt\", \"r\", stdin);\n//     // freopen(\"output.txt\",\
+    \ \"w\", stdout);\n//     #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
+    \tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >>\
+    \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Data_Structures/Segment_Tree/Point_Assign_Range_Sum.hpp\"\
     \nstruct Data {\n\tlong long int val = 0;\n};\nclass SegmentTree_PointAssignRangeSum\
     \ {\npublic:\n\tSegmentTree_PointAssignRangeSum(vector<Data> v) {\n\t\tarr = v;\n\
     \t\tn = arr.size();\n\t\tseg.resize((n << 1));\n\t\tBuild();\n\t}\n\tvoid Build()\
@@ -83,8 +83,8 @@ data:
   isVerificationFile: true
   path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
   requiredBy: []
-  timestamp: '2022-02-26 00:12:47+08:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-02-26 22:50:04+08:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Point_Add_Range_Sum_(Assign).test.cpp
 layout: document
