@@ -6,10 +6,10 @@ data:
     - icon: ':warning:'
       path: Data_Structures/Interval_Tree.hpp
       title: Data_Structures/Interval_Tree.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp
       title: Data_Structures/Segment_Tree_Point_Add_Range_Sum.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Data_Structures/Segment_Tree_Point_Assign_Range_Sum.hpp
       title: Data_Structures/Segment_Tree_Point_Assign_Range_Sum.hpp
     - icon: ':warning:'
@@ -47,10 +47,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: Tests/Matching_on_Bipartite_Graph.test.cpp
       title: Tests/Matching_on_Bipartite_Graph.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Tests/Point_Add_Range_Sum_(Add).test.cpp
       title: Tests/Point_Add_Range_Sum_(Add).test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
       title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
     - icon: ':heavy_check_mark:'
