@@ -1,12 +1,44 @@
-vector<int> LIS(vector<int> arr, bool strict = true) {
-	vector<int> sub;
-	for (int x : arr) {
-		if (sub.empty() || sub[sub.size() - 1] < x || (!strict && sub[sub.size() - 1] == x)) { // Append to LIS if new element is >=/> last element in LIS
-			sub.push_back(x);
-		} else {
-			int idx = lower_bound(sub.begin(), sub.end(), x + (!strict)) - sub.begin(); // Find the index of the smallest number >/>= x
-			sub[idx] = x;
-		}
-	}
-	return sub;
+vector<int> LIS(vector<int> &a, bool strict = true) {
+    int n = a.size();
+    vector<int> d(n + 1, 2e9);
+    vector<int> idx(n + 1), p(n);
+    d[0] = -2e9;
+    idx[0] = -1;
+    for (int i = 0; i < n; i++) {
+        if (strict) {
+            int j = upper_bound(d.begin(), d.end(), a[i]) - d.begin();
+            if (d[j - 1] < a[i] && a[i] < d[j]) {
+                d[j] = a[i];
+                idx[j] = i;
+                p[i] = idx[j - 1];
+            }
+        } else {
+            int j = upper_bound(d.begin(), d.end(), a[i]) - d.begin();
+            if (d[j - 1] <= a[i] && a[i] <= d[j]) {
+                d[j] = a[i];
+                idx[j] = i;
+                p[i] = idx[j - 1];
+            }
+        }
+    }
+    vector<int> sub;
+    int ptr = -1;
+    for (int i = n; i >= 1; i--) {
+        if (d[i] == 2e9) continue;
+        if (ptr == -1) ptr = idx[i];
+        sub.push_back(a[ptr]);
+        ptr = p[ptr];
+    }
+    reverse(sub.begin(), sub.end());
+    return sub;
+}
+vector<int> LDS(vector<int> &a, bool strict = true) {
+    int n = a.size();
+    int maxi = 0;
+    for (int x : a) maxi = max(maxi, x);
+    for (int i = 0; i < n; i++) a[i] = (maxi + 1) - a[i];
+    vector<int> sub = LIS(a, strict);
+    for (int i = 0; i < n; i++) a[i] = (maxi + 1) - a[i];
+    for (int i = 0; i < sub.size(); i++) sub[i] = (maxi + 1) - sub[i];
+    return sub;
 }
