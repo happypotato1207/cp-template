@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D"
 
 #include "../header.cpp"
-#include "../Miscellaneous/LIS.hpp"
+#include "../Miscellaneous/LIS_LDS.hpp"
 
 void init() {
 	// initialize
