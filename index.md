@@ -31,8 +31,8 @@ data:
   - name: Miscellaneous
     pages:
     - icon: ':heavy_check_mark:'
-      path: Miscellaneous/LIS.hpp
-      title: Miscellaneous/LIS.hpp
+      path: Miscellaneous/LIS_LDS.hpp
+      title: Miscellaneous/LIS_LDS.hpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'

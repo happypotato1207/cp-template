@@ -11,8 +11,8 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Miscellaneous/LIS.hpp\"\nvector<int> LIS(vector<int> &a,\
-    \ bool strict = true) {\n    int n = a.size();\n    vector<int> d(n + 1, 2e9);\n\
+  bundledCode: "#line 1 \"Miscellaneous/LIS_LDS.hpp\"\nvector<int> LIS(vector<int>\
+    \ &a, bool strict = true) {\n    int n = a.size();\n    vector<int> d(n + 1, 2e9);\n\
     \    vector<int> idx(n + 1), p(n);\n    d[0] = -2e9;\n    idx[0] = -1;\n    for\
     \ (int i = 0; i < n; i++) {\n        if (strict) {\n            int j = upper_bound(d.begin(),\
     \ d.end(), a[i]) - d.begin();\n            if (d[j - 1] < a[i] && a[i] < d[j])\
@@ -50,16 +50,16 @@ data:
     \ i < sub.size(); i++) sub[i] = (maxi + 1) - sub[i];\n    return sub;\n}\n"
   dependsOn: []
   isVerificationFile: false
-  path: Miscellaneous/LIS.hpp
+  path: Miscellaneous/LIS_LDS.hpp
   requiredBy: []
-  timestamp: '2022-03-01 01:24:56+08:00'
+  timestamp: '2022-03-01 01:30:09+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/Longest_Increasing_Subsequence.test.cpp
-documentation_of: Miscellaneous/LIS.hpp
+documentation_of: Miscellaneous/LIS_LDS.hpp
 layout: document
 redirect_from:
-- /library/Miscellaneous/LIS.hpp
-- /library/Miscellaneous/LIS.hpp.html
-title: Miscellaneous/LIS.hpp
+- /library/Miscellaneous/LIS_LDS.hpp
+- /library/Miscellaneous/LIS_LDS.hpp.html
+title: Miscellaneous/LIS_LDS.hpp
 ---

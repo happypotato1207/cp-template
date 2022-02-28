@@ -41,9 +41,9 @@ data:
     #endif\n//\ninline void yes() {\n\tcout << \"YES\" << endl;\n\treturn;\n}\ninline\
     \ void no() {\n\tcout << \"NO\" << endl;\n\treturn;\n}\ntemplate <class T>\ninline\
     \ void out(T temp) {\n\tcout << temp << endl;\n\treturn;\n}\n// global variables\n\
-    \nvoid init();\nvoid solve(int case_no);\n\nsigned main() {\n//     #ifndef ONLINE_JUDGE\n\
-    //     freopen(\"input.txt\", \"r\", stdin);\n//     // freopen(\"output.txt\"\
-    , \"w\", stdout);\n//     #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
+    \nvoid init();\nvoid solve(int case_no);\n\nsigned main() {\n        #ifndef ONLINE_JUDGE\n\
+    \        // freopen(\"input.txt\", \"r\", stdin);\n        // freopen(\"output.txt\"\
+    , \"w\", stdout);\n        #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
     \tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >>\
     \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Graph/DSU.hpp\"\
     \nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int n, bool directed_temp\
@@ -78,7 +78,7 @@ data:
   isVerificationFile: true
   path: Tests/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2022-02-26 22:50:04+08:00'
+  timestamp: '2022-03-01 01:28:11+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/UnionFind.test.cpp

@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: Miscellaneous/LIS.hpp
-    title: Miscellaneous/LIS.hpp
+    path: Miscellaneous/LIS_LDS.hpp
+    title: Miscellaneous/LIS_LDS.hpp
   - icon: ':heavy_check_mark:'
     path: header.cpp
     title: header.cpp
@@ -42,11 +42,11 @@ data:
     \ yes() {\n\tcout << \"YES\" << endl;\n\treturn;\n}\ninline void no() {\n\tcout\
     \ << \"NO\" << endl;\n\treturn;\n}\ntemplate <class T>\ninline void out(T temp)\
     \ {\n\tcout << temp << endl;\n\treturn;\n}\n// global variables\n\nvoid init();\n\
-    void solve(int case_no);\n\nsigned main() {\n//     #ifndef ONLINE_JUDGE\n// \
-    \    freopen(\"input.txt\", \"r\", stdin);\n//     // freopen(\"output.txt\",\
-    \ \"w\", stdout);\n//     #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
+    void solve(int case_no);\n\nsigned main() {\n        #ifndef ONLINE_JUDGE\n  \
+    \      // freopen(\"input.txt\", \"r\", stdin);\n        // freopen(\"output.txt\"\
+    , \"w\", stdout);\n        #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
     \tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >>\
-    \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Miscellaneous/LIS.hpp\"\
+    \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Miscellaneous/LIS_LDS.hpp\"\
     \nvector<int> LIS(vector<int> &a, bool strict = true) {\n    int n = a.size();\n\
     \    vector<int> d(n + 1, 2e9);\n    vector<int> idx(n + 1), p(n);\n    d[0] =\
     \ -2e9;\n    idx[0] = -1;\n    for (int i = 0; i < n; i++) {\n        if (strict)\
@@ -70,17 +70,17 @@ data:
     vector<int> v(n);\n\tfor (int i = 0; i < n; i++) cin >> v[i];\n\tcout << LIS(v).size()\
     \ << endl;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D\"\n\n\
-    #include \"../header.cpp\"\n#include \"../Miscellaneous/LIS.hpp\"\n\nvoid init()\
-    \ {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\t\
-    int n;\n\tcin >> n;\n\tvector<int> v(n);\n\tfor (int i = 0; i < n; i++) cin >>\
-    \ v[i];\n\tcout << LIS(v).size() << endl;\n}\n"
+    #include \"../header.cpp\"\n#include \"../Miscellaneous/LIS_LDS.hpp\"\n\nvoid\
+    \ init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
+    \tint n;\n\tcin >> n;\n\tvector<int> v(n);\n\tfor (int i = 0; i < n; i++) cin\
+    \ >> v[i];\n\tcout << LIS(v).size() << endl;\n}\n"
   dependsOn:
   - header.cpp
-  - Miscellaneous/LIS.hpp
+  - Miscellaneous/LIS_LDS.hpp
   isVerificationFile: true
   path: Tests/Longest_Increasing_Subsequence.test.cpp
   requiredBy: []
-  timestamp: '2022-03-01 01:24:56+08:00'
+  timestamp: '2022-03-01 01:30:09+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Longest_Increasing_Subsequence.test.cpp
