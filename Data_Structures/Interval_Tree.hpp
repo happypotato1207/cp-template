@@ -26,13 +26,16 @@ public:
     }
     pair<int, int> GetRangeIn(int x) {
         // returns the range which includes x (first <= x <= second)
+        if (range.empty()) return {-1, -1};
         it = range.upper_bound(x);
         if (it == range.begin()) return {-1, -1};
         --it;
+        if (!(it->first <= x && x <= it->second)) return {-1, -1};
         return {it->first, it->second};
     }
     pair<int, int> GetRangeOut(int x) {
         // returns the range which excludes x (x < first)
+        if (range.empty()) return {-1, -1};
         it = range.upper_bound(x);
         if (it == range.end()) return {-1, -1};
         return {it->first, it->second};
