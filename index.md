@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: Data_Structures
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Data_Structures/Interval_Tree.hpp
       title: Data_Structures/Interval_Tree.hpp
     - icon: ':heavy_check_mark:'
@@ -41,6 +41,9 @@ data:
   verificationCategories:
   - name: Tests
     pages:
+    - icon: ':heavy_check_mark:'
+      path: Tests/Interval_Tree.test.cpp
+      title: Tests/Interval_Tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: Tests/Longest_Increasing_Subsequence.test.cpp
       title: Tests/Longest_Increasing_Subsequence.test.cpp

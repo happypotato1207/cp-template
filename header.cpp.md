@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: Tests/Interval_Tree.test.cpp
+    title: Tests/Interval_Tree.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Tests/Longest_Increasing_Subsequence.test.cpp
     title: Tests/Longest_Increasing_Subsequence.test.cpp
   - icon: ':heavy_check_mark:'
@@ -90,6 +93,7 @@ data:
   - Tests/Longest_Increasing_Subsequence.test.cpp
   - Tests/Point_Add_Range_Sum_(Add).test.cpp
   - Tests/UnionFind.test.cpp
+  - Tests/Interval_Tree.test.cpp
   - Tests/Point_Add_Range_Sum_(Assign).test.cpp
 documentation_of: header.cpp
 layout: document
