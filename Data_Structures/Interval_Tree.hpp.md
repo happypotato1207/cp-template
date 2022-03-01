@@ -19,10 +19,12 @@ data:
     \    CheckContain(l, r);\n                if (it == range.end()) break;\n    \
     \            range.erase(it);\n            }\n        }\n        range[l] = r;\n\
     \    }\n    pair<int, int> GetRangeIn(int x) {\n        // returns the range which\
-    \ includes x (first <= x <= second)\n        it = range.upper_bound(x);\n    \
-    \    if (it == range.begin()) return {-1, -1};\n        --it;\n        return\
-    \ {it->first, it->second};\n    }\n    pair<int, int> GetRangeOut(int x) {\n \
-    \       // returns the range which excludes x (x < first)\n        it = range.upper_bound(x);\n\
+    \ includes x (first <= x <= second)\n        if (range.empty()) return {-1, -1};\n\
+    \        it = range.upper_bound(x);\n        if (it == range.begin()) return {-1,\
+    \ -1};\n        --it;\n        if (!(it->first <= x && x <= it->second)) return\
+    \ {-1, -1};\n        return {it->first, it->second};\n    }\n    pair<int, int>\
+    \ GetRangeOut(int x) {\n        // returns the range which excludes x (x < first)\n\
+    \        if (range.empty()) return {-1, -1};\n        it = range.upper_bound(x);\n\
     \        if (it == range.end()) return {-1, -1};\n        return {it->first, it->second};\n\
     \    }\nprivate:\n    bool small = true;\n    map<int, int>::iterator it;\n  \
     \  void CheckContain(int l, int r) { \n        // assign pointer of range being\
@@ -44,10 +46,12 @@ data:
     \                CheckContain(l, r);\n                if (it == range.end()) break;\n\
     \                range.erase(it);\n            }\n        }\n        range[l]\
     \ = r;\n    }\n    pair<int, int> GetRangeIn(int x) {\n        // returns the\
-    \ range which includes x (first <= x <= second)\n        it = range.upper_bound(x);\n\
-    \        if (it == range.begin()) return {-1, -1};\n        --it;\n        return\
-    \ {it->first, it->second};\n    }\n    pair<int, int> GetRangeOut(int x) {\n \
-    \       // returns the range which excludes x (x < first)\n        it = range.upper_bound(x);\n\
+    \ range which includes x (first <= x <= second)\n        if (range.empty()) return\
+    \ {-1, -1};\n        it = range.upper_bound(x);\n        if (it == range.begin())\
+    \ return {-1, -1};\n        --it;\n        if (!(it->first <= x && x <= it->second))\
+    \ return {-1, -1};\n        return {it->first, it->second};\n    }\n    pair<int,\
+    \ int> GetRangeOut(int x) {\n        // returns the range which excludes x (x\
+    \ < first)\n        if (range.empty()) return {-1, -1};\n        it = range.upper_bound(x);\n\
     \        if (it == range.end()) return {-1, -1};\n        return {it->first, it->second};\n\
     \    }\nprivate:\n    bool small = true;\n    map<int, int>::iterator it;\n  \
     \  void CheckContain(int l, int r) { \n        // assign pointer of range being\
@@ -63,7 +67,7 @@ data:
   isVerificationFile: false
   path: Data_Structures/Interval_Tree.hpp
   requiredBy: []
-  timestamp: '2022-02-26 23:49:26+08:00'
+  timestamp: '2022-03-01 09:21:48+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Data_Structures/Interval_Tree.hpp
