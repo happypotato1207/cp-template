@@ -21,18 +21,18 @@ public:
     }
     // Computes the Sparse Table
     void Compute() {
-        for (int depth = 1; ; depth++) {
-            if ((1 << depth) > n) break;
+        for (int depth = 1; (1 << depth) <= n; depth++) {
             sp.push_back({});
-            for (int j = 0; j <= n - (1 << depth); j++) {
+            for (int j = 0; j < n - (1 << depth) + 1; j++) {
                 // change function below
-                sp[depth].push_back(min(sp[depth - 1][j], sp[depth - 1][j + (1 << depth)]));
+                sp[depth].push_back(min(sp[depth - 1][j], sp[depth - 1][j + (1 << (depth - 1))]));
             }
         }
         finished = true;
     }
+    // Query [l, r]
     int Query(int l, int r) {
-        if (l > r) return 0;
+        if (l > r || l < 0 || r >= n) return 0;
         if (l == r) return sp[0][l];
         int depth = floor(log2(r - l));
         // change below
