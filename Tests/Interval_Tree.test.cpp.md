@@ -46,67 +46,69 @@ data:
     , \"w\", stdout);\n        #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
     \tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >>\
     \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Data_Structures/Interval_Tree.hpp\"\
-    \nclass IntervalTree {\npublic:\n    map<int, int> range;\n    IntervalTree(bool\
-    \ keep_small) {\n        small = keep_small;\n    }\n    void AddRange(int l,\
-    \ int r) {\n        if (small) {\n            CheckContain(l, r);\n          \
-    \  if (it != range.end()) return;\n            while (true) {\n              \
-    \  CheckContainBy(l, r);\n                if (it == range.end()) break;\n    \
-    \            range.erase(it);\n            }\n        } else {\n            CheckContainBy(l,\
-    \ r);\n            if (it != range.end()) return;\n            while (true) {\n\
-    \                CheckContain(l, r);\n                if (it == range.end()) break;\n\
-    \                range.erase(it);\n            }\n        }\n        range[l]\
-    \ = r;\n    }\n    pair<int, int> GetRangeIn(int x) {\n        // returns the\
-    \ range which includes x (first <= x <= second)\n        if (range.empty()) return\
-    \ {-1, -1};\n        it = range.upper_bound(x);\n        if (it == range.begin())\
-    \ return {-1, -1};\n        --it;\n        if (!(it->first <= x && x <= it->second))\
-    \ return {-1, -1};\n        return {it->first, it->second};\n    }\n    pair<int,\
-    \ int> GetRangeOut(int x) {\n        // returns the range which excludes x (x\
-    \ < first)\n        if (range.empty()) return {-1, -1};\n        it = range.upper_bound(x);\n\
-    \        if (it == range.end()) return {-1, -1};\n        return {it->first, it->second};\n\
-    \    }\nprivate:\n    bool small = true;\n    map<int, int>::iterator it;\n  \
-    \  void CheckContain(int l, int r) { \n        // assign pointer of range being\
-    \ contained\n        if (range.empty()) {\n            it = range.end();\n   \
-    \         return;\n        }\n        it = range.lower_bound(l);\n        if (it\
-    \ != range.end() && it->second > r) it = range.end();\n        return;\n    }\n\
-    \    void CheckContainBy(int l, int r) {\n        // assign pointer of range containing\n\
-    \        if (range.empty()) {\n            it = range.end();\n            return;\n\
-    \        }\n        it = range.upper_bound(l);\n        if (it == range.begin())\
-    \ {\n            it = range.end();\n            return;\n        }\n        --it;\n\
-    \        if (it->second < r) it = range.end();\n        return;\n    }\n};\n#line\
-    \ 5 \"Tests/Interval_Tree.test.cpp\"\n\nvoid init() {\n\t// initialize\n    \n\
-    }\nvoid solve(int case_no) {\n\t// implementation\n    int n, m;\n    vector<IntervalTree>\
-    \ record;\n    while (true) {\n        cin >> n >> m;\n        if (n == 0 && m\
-    \ == 0) return;\n        record.clear();\n        IntervalTree temp(false);\n\
-    \        for (int i = 0; i <= m; i++) record.pb(temp);\n        int r;\n     \
-    \   cin >> r;\n        map<pii, int> mp;\n        while (r--) {\n            int\
-    \ t, x, y, s;\n            cin >> t >> x >> y >> s;\n            if (s == 1) mp[{x,\
-    \ y}] = t;\n            else record[y].AddRange(mp[{x, y}], t);\n        }\n \
-    \       int q;\n        cin >> q;\n        while (q--) {\n            int lb,\
-    \ ub, x;\n            cin >> lb >> ub >> x;\n            int ans = 0;\n      \
-    \      int prev = lb;\n            if (record[x].GetRangeIn(lb).first == -1) {\n\
-    \                prev = record[x].GetRangeOut(lb).first;\n            }\n    \
-    \        while (prev < ub && prev != -1) {\n                pii cur = record[x].GetRangeIn(prev);\n\
-    \                cur.ss = min(cur.ss, ub);\n                if (cur.ss == prev)\
-    \ {\n                    prev = record[x].GetRangeOut(prev).first;\n         \
-    \       } else {\n                    ans += cur.ss - prev;\n                \
-    \    prev = cur.ss;\n                }\n            }\n            out(ans);\n\
+    \n// Template: Interval Tree (Selective)\n// Doesn't delete range when it overlaps\
+    \ but doesn't completely cover/get covered\n// Deletes the smaller/larger interval\
+    \ depending on [keep_small]\nclass IntervalTree_Selective {\npublic:\n    map<int,\
+    \ int> range;\n    IntervalTree_Selective(bool keep_small) {\n        small =\
+    \ keep_small;\n    }\n    void AddRange(int l, int r) {\n        if (small) {\n\
+    \            CheckContain(l, r);\n            if (it != range.end()) return;\n\
+    \            while (true) {\n                CheckContainBy(l, r);\n         \
+    \       if (it == range.end()) break;\n                range.erase(it);\n    \
+    \        }\n        } else {\n            CheckContainBy(l, r);\n            if\
+    \ (it != range.end()) return;\n            while (true) {\n                CheckContain(l,\
+    \ r);\n                if (it == range.end()) break;\n                range.erase(it);\n\
+    \            }\n        }\n        range[l] = r;\n    }\n    pair<int, int> GetRangeIn(int\
+    \ x) {\n        // returns the range which includes x (first <= x <= second)\n\
+    \        if (range.empty()) return {-1, -1};\n        it = range.upper_bound(x);\n\
+    \        if (it == range.begin()) return {-1, -1};\n        --it;\n        if\
+    \ (!(it->first <= x && x <= it->second)) return {-1, -1};\n        return {it->first,\
+    \ it->second};\n    }\n    pair<int, int> GetRangeLarger(int x) {\n        //\
+    \ returns the range strictly larger than x (x < first)\n        if (range.empty())\
+    \ return {-1, -1};\n        it = range.upper_bound(x);\n        if (it == range.end())\
+    \ return {-1, -1};\n        return {it->first, it->second};\n    }\nprivate:\n\
+    \    bool small = true;\n    map<int, int>::iterator it;\n    void CheckContain(int\
+    \ l, int r) { \n        // assign pointer of range being contained\n        if\
+    \ (range.empty()) {\n            it = range.end();\n            return;\n    \
+    \    }\n        it = range.lower_bound(l);\n        if (it != range.end() && it->second\
+    \ > r) it = range.end();\n        return;\n    }\n    void CheckContainBy(int\
+    \ l, int r) {\n        // assign pointer of range containing\n        if (range.empty())\
+    \ {\n            it = range.end();\n            return;\n        }\n        it\
+    \ = range.upper_bound(l);\n        if (it == range.begin()) {\n            it\
+    \ = range.end();\n            return;\n        }\n        --it;\n        if (it->second\
+    \ < r) it = range.end();\n        return;\n    }\n};\n#line 5 \"Tests/Interval_Tree.test.cpp\"\
+    \n\nvoid init() {\n\t// initialize\n    \n}\nvoid solve(int case_no) {\n\t// implementation\n\
+    \    int n, m;\n    vector<IntervalTree_Selective> record;\n    while (true) {\n\
+    \        cin >> n >> m;\n        if (n == 0 && m == 0) return;\n        record.clear();\n\
+    \        IntervalTree_Selective temp(false);\n        for (int i = 0; i <= m;\
+    \ i++) record.pb(temp);\n        int r;\n        cin >> r;\n        map<pii, int>\
+    \ mp;\n        while (r--) {\n            int t, x, y, s;\n            cin >>\
+    \ t >> x >> y >> s;\n            if (s == 1) mp[{x, y}] = t;\n            else\
+    \ record[y].AddRange(mp[{x, y}], t);\n        }\n        int q;\n        cin >>\
+    \ q;\n        while (q--) {\n            int lb, ub, x;\n            cin >> lb\
+    \ >> ub >> x;\n            int ans = 0;\n            int prev = lb;\n        \
+    \    if (record[x].GetRangeIn(lb).first == -1) {\n                prev = record[x].GetRangeLarger(lb).first;\n\
+    \            }\n            while (prev < ub && prev != -1) {\n              \
+    \  pii cur = record[x].GetRangeIn(prev);\n                cur.ss = min(cur.ss,\
+    \ ub);\n                if (cur.ss == prev) {\n                    prev = record[x].GetRangeLarger(prev).first;\n\
+    \                } else {\n                    ans += cur.ss - prev;\n       \
+    \             prev = cur.ss;\n                }\n            }\n            out(ans);\n\
     \        }\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/1148\"\n\n#include\
     \ \"../header.cpp\"\n#include \"../Data_Structures/Interval_Tree.hpp\"\n\nvoid\
     \ init() {\n\t// initialize\n    \n}\nvoid solve(int case_no) {\n\t// implementation\n\
-    \    int n, m;\n    vector<IntervalTree> record;\n    while (true) {\n       \
-    \ cin >> n >> m;\n        if (n == 0 && m == 0) return;\n        record.clear();\n\
-    \        IntervalTree temp(false);\n        for (int i = 0; i <= m; i++) record.pb(temp);\n\
-    \        int r;\n        cin >> r;\n        map<pii, int> mp;\n        while (r--)\
-    \ {\n            int t, x, y, s;\n            cin >> t >> x >> y >> s;\n     \
-    \       if (s == 1) mp[{x, y}] = t;\n            else record[y].AddRange(mp[{x,\
-    \ y}], t);\n        }\n        int q;\n        cin >> q;\n        while (q--)\
-    \ {\n            int lb, ub, x;\n            cin >> lb >> ub >> x;\n         \
-    \   int ans = 0;\n            int prev = lb;\n            if (record[x].GetRangeIn(lb).first\
-    \ == -1) {\n                prev = record[x].GetRangeOut(lb).first;\n        \
-    \    }\n            while (prev < ub && prev != -1) {\n                pii cur\
-    \ = record[x].GetRangeIn(prev);\n                cur.ss = min(cur.ss, ub);\n \
-    \               if (cur.ss == prev) {\n                    prev = record[x].GetRangeOut(prev).first;\n\
+    \    int n, m;\n    vector<IntervalTree_Selective> record;\n    while (true) {\n\
+    \        cin >> n >> m;\n        if (n == 0 && m == 0) return;\n        record.clear();\n\
+    \        IntervalTree_Selective temp(false);\n        for (int i = 0; i <= m;\
+    \ i++) record.pb(temp);\n        int r;\n        cin >> r;\n        map<pii, int>\
+    \ mp;\n        while (r--) {\n            int t, x, y, s;\n            cin >>\
+    \ t >> x >> y >> s;\n            if (s == 1) mp[{x, y}] = t;\n            else\
+    \ record[y].AddRange(mp[{x, y}], t);\n        }\n        int q;\n        cin >>\
+    \ q;\n        while (q--) {\n            int lb, ub, x;\n            cin >> lb\
+    \ >> ub >> x;\n            int ans = 0;\n            int prev = lb;\n        \
+    \    if (record[x].GetRangeIn(lb).first == -1) {\n                prev = record[x].GetRangeLarger(lb).first;\n\
+    \            }\n            while (prev < ub && prev != -1) {\n              \
+    \  pii cur = record[x].GetRangeIn(prev);\n                cur.ss = min(cur.ss,\
+    \ ub);\n                if (cur.ss == prev) {\n                    prev = record[x].GetRangeLarger(prev).first;\n\
     \                } else {\n                    ans += cur.ss - prev;\n       \
     \             prev = cur.ss;\n                }\n            }\n            out(ans);\n\
     \        }\n    }\n}\n"
@@ -116,7 +118,7 @@ data:
   isVerificationFile: true
   path: Tests/Interval_Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-03-01 09:23:59+08:00'
+  timestamp: '2022-03-07 22:16:10+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Interval_Tree.test.cpp
