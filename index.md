@@ -56,6 +56,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
       title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
+    - icon: ':x:'
+      path: Tests/Static_RMQ.test.cpp
+      title: Tests/Static_RMQ.test.cpp
     - icon: ':heavy_check_mark:'
       path: Tests/UnionFind.test.cpp
       title: Tests/UnionFind.test.cpp
