@@ -1,71 +1,43 @@
-class IntervalTree {
-public:
-    map<int, int> range;
-    IntervalTree(bool keep_small) {
-        small = keep_small;
-    }
-    void AddRange(int l, int r) {
-        if (small) {
-            CheckContain(l, r);
-            if (it != range.end()) return;
-            while (true) {
-                CheckContainBy(l, r);
-                if (it == range.end()) break;
-                range.erase(it);
+void solve(int case_no) {
+	// implementation
+    int n, m;
+    vector<IntervalTree_Selective> record;
+    while (true) {
+        cin >> n >> m;
+        if (n == 0 && m == 0) return;
+        record.clear();
+        IntervalTree_Selective temp(false);
+        for (int i = 0; i <= m; i++) record.pb(temp);
+        int r;
+        cin >> r;
+        map<pii, int> mp;
+        while (r--) {
+            int t, x, y, s;
+            cin >> t >> x >> y >> s;
+            if (s == 1) mp[{x, y}] = t;
+            else record[y].AddRange(mp[{x, y}], t);
+        }
+        int q;
+        cin >> q;
+        while (q--) {
+            int lb, ub, x;
+            cin >> lb >> ub >> x;
+            int ans = 0;
+            int prev = lb;
+            if (record[x].GetRangeIn(lb).first == -1) {
+                prev = record[x].GetRangeLarger(lb).first;
             }
-        } else {
-            CheckContainBy(l, r);
-            if (it != range.end()) return;
-            while (true) {
-                CheckContain(l, r);
-                if (it == range.end()) break;
-                range.erase(it);
+            while (prev < ub && prev != -1) {
+                pii cur = record[x].GetRangeIn(prev);
+                cur.ss = min(cur.ss, ub);
+                if (cur.ss == prev) {
+                    prev = record[x].GetRangeLarger(prev).first;
+                } else {
+                    ans += cur.ss - prev;
+                    prev = cur.ss;
+                }
             }
+            out(ans);
         }
-        range[l] = r;
     }
-    pair<int, int> GetRangeIn(int x) {
-        // returns the range which includes x (first <= x <= second)
-        if (range.empty()) return {-1, -1};
-        it = range.upper_bound(x);
-        if (it == range.begin()) return {-1, -1};
-        --it;
-        if (!(it->first <= x && x <= it->second)) return {-1, -1};
-        return {it->first, it->second};
-    }
-    pair<int, int> GetRangeOut(int x) {
-        // returns the range which excludes x (x < first)
-        if (range.empty()) return {-1, -1};
-        it = range.upper_bound(x);
-        if (it == range.end()) return {-1, -1};
-        return {it->first, it->second};
-    }
-private:
-    bool small = true;
-    map<int, int>::iterator it;
-    void CheckContain(int l, int r) { 
-        // assign pointer of range being contained
-        if (range.empty()) {
-            it = range.end();
-            return;
-        }
-        it = range.lower_bound(l);
-        if (it != range.end() && it->second > r) it = range.end();
-        return;
-    }
-    void CheckContainBy(int l, int r) {
-        // assign pointer of range containing
-        if (range.empty()) {
-            it = range.end();
-            return;
-        }
-        it = range.upper_bound(l);
-        if (it == range.begin()) {
-            it = range.end();
-            return;
-        }
-        --it;
-        if (it->second < r) it = range.end();
-        return;
-    }
-};
+}
