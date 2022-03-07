@@ -12,7 +12,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Data_Structures/Segment_Tree_Point_Assign_Range_Sum.hpp
       title: Data_Structures/Segment_Tree_Point_Assign_Range_Sum.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Data_Structures/Sparse_Table.hpp
       title: Data_Structures/Sparse_Table.hpp
   - name: Flow
@@ -56,7 +56,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
       title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Tests/Static_RMQ.test.cpp
       title: Tests/Static_RMQ.test.cpp
     - icon: ':heavy_check_mark:'

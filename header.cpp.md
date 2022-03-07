@@ -19,6 +19,9 @@ data:
     path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
     title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
   - icon: ':heavy_check_mark:'
+    path: Tests/Static_RMQ.test.cpp
+    title: Tests/Static_RMQ.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
   _isVerificationFailed: false
@@ -93,6 +96,7 @@ data:
   - Tests/Longest_Increasing_Subsequence.test.cpp
   - Tests/Point_Add_Range_Sum_(Add).test.cpp
   - Tests/UnionFind.test.cpp
+  - Tests/Static_RMQ.test.cpp
   - Tests/Interval_Tree.test.cpp
   - Tests/Point_Add_Range_Sum_(Assign).test.cpp
 documentation_of: header.cpp
