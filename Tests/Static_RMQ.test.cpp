@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/staticrmq"
 
 #include "../header.cpp"
-#include "../Data_Structure/Sparse_Table.hpp"
+#include "../Data_Structures/Sparse_Table.hpp"
 
 void init() {
 	// initialize
