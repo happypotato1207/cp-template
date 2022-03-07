@@ -10,12 +10,12 @@ void init() {
 void solve(int case_no) {
 	// implementation
     int n, m;
-    vector<IntervalTree> record;
+    vector<IntervalTree_Selective> record;
     while (true) {
         cin >> n >> m;
         if (n == 0 && m == 0) return;
         record.clear();
-        IntervalTree temp(false);
+        IntervalTree_Selective temp(false);
         for (int i = 0; i <= m; i++) record.pb(temp);
         int r;
         cin >> r;
@@ -34,13 +34,13 @@ void solve(int case_no) {
             int ans = 0;
             int prev = lb;
             if (record[x].GetRangeIn(lb).first == -1) {
-                prev = record[x].GetRangeOut(lb).first;
+                prev = record[x].GetRangeLarger(lb).first;
             }
             while (prev < ub && prev != -1) {
                 pii cur = record[x].GetRangeIn(prev);
                 cur.ss = min(cur.ss, ub);
                 if (cur.ss == prev) {
-                    prev = record[x].GetRangeOut(prev).first;
+                    prev = record[x].GetRangeLarger(prev).first;
                 } else {
                     ans += cur.ss - prev;
                     prev = cur.ss;
