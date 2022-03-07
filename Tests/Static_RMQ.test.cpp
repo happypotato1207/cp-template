@@ -18,6 +18,6 @@ void solve(int case_no) {
     while (q--) {
         int l, r;
         cin >> l >> r;
-        out(ST.Query(l, r - 1));
+        cout << ST.Query(l, r - 1) << endl;
     }
 }
