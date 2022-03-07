@@ -21,8 +21,8 @@ data:
     \ {\n\t// initialize\n    \n}\nvoid solve(int case_no) {\n\t// implementation\n\
     \    int n, q;\n    cin >> n >> q;\n    vector<int> v(n);\n    for (int i = 0;\
     \ i < n; i++) cin >> v[i];\n    SparseTable ST(v);\n    ST.Compute();\n    while\
-    \ (q--) {\n        int l, r;\n        cin >> l >> r;\n        out(ST.Query(l,\
-    \ r - 1));\n    }\n}\n"
+    \ (q--) {\n        int l, r;\n        cin >> l >> r;\n        cout << ST.Query(l,\
+    \ r - 1) << endl;\n    }\n}\n"
   dependsOn: []
   isVerificationFile: true
   path: Tests/Static_RMQ.test.cpp
