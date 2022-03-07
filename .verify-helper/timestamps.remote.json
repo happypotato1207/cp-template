@@ -4,5 +4,6 @@
 "Tests/Matching_on_Bipartite_Graph.test.cpp": "2022-03-01 01:28:11 +0800",
 "Tests/Point_Add_Range_Sum_(Add).test.cpp": "2022-03-01 01:28:11 +0800",
 "Tests/Point_Add_Range_Sum_(Assign).test.cpp": "2022-03-01 01:28:11 +0800",
+"Tests/Static_RMQ.test.cpp": "2022-03-07 23:53:12 +0800",
 "Tests/UnionFind.test.cpp": "2022-03-01 01:28:11 +0800"
 }
