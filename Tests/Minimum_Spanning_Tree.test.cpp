@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/GRL_2_A"
 
 #include "../header.cpp"
-#include "../Graph/MST/Kruskal.hpp"
+#include "../Graph/MST_Kruskal.hpp"
 
 void init() {
 	// initialize
