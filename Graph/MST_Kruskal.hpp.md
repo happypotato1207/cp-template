@@ -37,22 +37,22 @@ data:
     \               res.push_back(cur);\n                tot += cur.w;\n         \
     \       cnt++;\n            }\n        }\n        return tot;\n    }\nprivate:\n\
     \    vector<edge> edges;\n};\n"
-  code: "#include \"../Graph/DSU.hpp\"\n\nstruct edge {\n    int u, v;\n    long long\
-    \ w;\n};\nclass MST_Kruskal {\npublic:\n    vector<edge> res;\n    int n;\n  \
-    \  MST_Kruskal(int sz) {\n        n = sz;\n    }\n    void AddEdge(int u, int\
-    \ v, long long w) {\n        edges.push_back({u, v, w});\n    }\n    long long\
-    \ ComputeMST() {\n        sort(edges.begin(), edges.end(), [](edge &a, edge &b){\
-    \ return a.w < b.w; });\n        DisjointSetUnion DSU(n);\n        long long tot\
-    \ = 0;\n        int cnt = 0;\n        res.clear();\n        for (edge &cur : edges)\
-    \ {\n            if (DSU.Union(cur.u, cur.v)) {\n                res.push_back(cur);\n\
-    \                tot += cur.w;\n                cnt++;\n            }\n      \
-    \  }\n        return tot;\n    }\nprivate:\n    vector<edge> edges;\n};\n"
+  code: "#include \"DSU.hpp\"\n\nstruct edge {\n    int u, v;\n    long long w;\n\
+    };\nclass MST_Kruskal {\npublic:\n    vector<edge> res;\n    int n;\n    MST_Kruskal(int\
+    \ sz) {\n        n = sz;\n    }\n    void AddEdge(int u, int v, long long w) {\n\
+    \        edges.push_back({u, v, w});\n    }\n    long long ComputeMST() {\n  \
+    \      sort(edges.begin(), edges.end(), [](edge &a, edge &b){ return a.w < b.w;\
+    \ });\n        DisjointSetUnion DSU(n);\n        long long tot = 0;\n        int\
+    \ cnt = 0;\n        res.clear();\n        for (edge &cur : edges) {\n        \
+    \    if (DSU.Union(cur.u, cur.v)) {\n                res.push_back(cur);\n   \
+    \             tot += cur.w;\n                cnt++;\n            }\n        }\n\
+    \        return tot;\n    }\nprivate:\n    vector<edge> edges;\n};\n"
   dependsOn:
   - Graph/DSU.hpp
   isVerificationFile: false
   path: Graph/MST_Kruskal.hpp
   requiredBy: []
-  timestamp: '2022-03-08 18:31:22+08:00'
+  timestamp: '2022-03-08 18:31:36+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Graph/MST_Kruskal.hpp
