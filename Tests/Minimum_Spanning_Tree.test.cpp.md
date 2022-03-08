@@ -18,12 +18,12 @@ data:
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: DSU.hpp: line\
     \ -1: no such header\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_2_A\"\
-    \n\n#include \"../header.cpp\"\n#include \"../Graph/MST/Kruskal.hpp\"\n\nvoid\
-    \ init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
-    \    int n, m;\n    cin >> n >> m;\n    MST_Kruskal MST(n);\n    for (int i =\
-    \ 0; i < m; i++) {\n        int u, v, w;\n        cin >> u >> v >> w;\n      \
-    \  MST.AddEdge(u, v, w);\n    }\n    cout << MST.ComputeMST() << endl;\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/GRL_2_A\"\n\n\
+    #include \"../header.cpp\"\n#include \"../Graph/MST/Kruskal.hpp\"\n\nvoid init()\
+    \ {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n  \
+    \  int n, m;\n    cin >> n >> m;\n    MST_Kruskal MST(n);\n    for (int i = 0;\
+    \ i < m; i++) {\n        int u, v, w;\n        cin >> u >> v >> w;\n        MST.AddEdge(u,\
+    \ v, w);\n    }\n    cout << MST.ComputeMST() << endl;\n}\n"
   dependsOn: []
   isVerificationFile: true
   path: Tests/Minimum_Spanning_Tree.test.cpp
