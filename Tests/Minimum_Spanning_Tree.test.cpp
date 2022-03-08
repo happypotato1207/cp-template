@@ -1,4 +1,4 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_2_A"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/GRL_2_A"
 
 #include "../header.cpp"
 #include "../Graph/MST/Kruskal.hpp"
