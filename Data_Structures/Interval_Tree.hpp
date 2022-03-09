@@ -2,6 +2,7 @@
 // Doesn't delete range when it overlaps but doesn't completely cover/get covered
 // Deletes the smaller/larger interval depending on [keep_small]
 // Averaged query time O(log n)
+
 class IntervalTree_Selective {
 public:
     map<int, int> range;
