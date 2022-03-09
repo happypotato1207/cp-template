@@ -2,6 +2,7 @@
 // Pass in a vector (call by reference)
 // strict: Longest [Strictly] Increasing/Decreasing
 // Returns answer in O(n log n)
+
 vector<int> LIS(vector<int> &a, bool strict = true) {
     int n = a.size();
     vector<int> d(n + 1, 2e9);
