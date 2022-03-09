@@ -25,7 +25,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/DSU.hpp
       title: Graph/DSU.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Graph/MST_Kruskal.hpp
       title: Graph/MST_Kruskal.hpp
   - name: Miscellaneous
@@ -53,6 +53,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Tests/Matching_on_Bipartite_Graph.test.cpp
       title: Tests/Matching_on_Bipartite_Graph.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Tests/Minimum_Spanning_Tree.test.cpp
+      title: Tests/Minimum_Spanning_Tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: Tests/Point_Add_Range_Sum_(Add).test.cpp
       title: Tests/Point_Add_Range_Sum_(Add).test.cpp

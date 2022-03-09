@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Graph/MST_Kruskal.hpp
     title: Graph/MST_Kruskal.hpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Tests/Minimum_Spanning_Tree.test.cpp
+    title: Tests/Minimum_Spanning_Tree.test.cpp
   - icon: ':heavy_check_mark:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
@@ -54,6 +57,7 @@ data:
   timestamp: '2022-02-22 21:14:29+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - Tests/Minimum_Spanning_Tree.test.cpp
   - Tests/UnionFind.test.cpp
 documentation_of: Graph/DSU.hpp
 layout: document
