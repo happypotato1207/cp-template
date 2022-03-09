@@ -33,6 +33,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Miscellaneous/LIS_LDS.hpp
       title: Miscellaneous/LIS_LDS.hpp
+    - icon: ':warning:'
+      path: Miscellaneous/RNG.hpp
+      title: Miscellaneous/RNG.hpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
