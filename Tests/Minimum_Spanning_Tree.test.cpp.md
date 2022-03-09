@@ -55,7 +55,7 @@ data:
     Graph/DSU.hpp\"\n// Template: Disjoint Set Union\n// Maintaining and merging sets\
     \ of nodes\n// O(\\alpha(n)) per query, where \\alpha(n) is inverse Ackermann\
     \ function (basically O(1) as \\alpha(10^600) < 4)\n// Without path compression,\
-    \ O(log n) per query\nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int\
+    \ O(log n) per query\n\nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int\
     \ n, bool directed_temp = false, bool path_compression_temp = true) {\n\t\tparent.resize(n\
     \ + 1, -1);\n\t\trank.resize(n + 1, 1);\n\t\tsize.resize(n + 1, 1);\n\t\tdirected\
     \ = directed_temp;\n\t\tpath_compression = path_compression_temp;\n\t}\n\tint\
@@ -98,7 +98,7 @@ data:
   isVerificationFile: true
   path: Tests/Minimum_Spanning_Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-03-09 16:57:19+08:00'
+  timestamp: '2022-03-09 17:01:03+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Minimum_Spanning_Tree.test.cpp

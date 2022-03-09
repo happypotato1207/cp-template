@@ -49,8 +49,8 @@ data:
     \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Miscellaneous/LIS_LDS.hpp\"\
     \n// Template: Longest Increasing/Decreasing Subsequence\n// Pass in a vector\
     \ (call by reference)\n// strict: Longest [Strictly] Increasing/Decreasing\n//\
-    \ Returns answer in O(n log n)\nvector<int> LIS(vector<int> &a, bool strict =\
-    \ true) {\n    int n = a.size();\n    vector<int> d(n + 1, 2e9);\n    vector<int>\
+    \ Returns answer in O(n log n)\n\nvector<int> LIS(vector<int> &a, bool strict\
+    \ = true) {\n    int n = a.size();\n    vector<int> d(n + 1, 2e9);\n    vector<int>\
     \ idx(n + 1), p(n);\n    d[0] = -2e9;\n    idx[0] = -1;\n    for (int i = 0; i\
     \ < n; i++) {\n        if (strict) {\n            int j = upper_bound(d.begin(),\
     \ d.end(), a[i]) - d.begin();\n            if (d[j - 1] < a[i] && a[i] < d[j])\
@@ -82,7 +82,7 @@ data:
   isVerificationFile: true
   path: Tests/Longest_Increasing_Subsequence.test.cpp
   requiredBy: []
-  timestamp: '2022-03-09 16:47:40+08:00'
+  timestamp: '2022-03-09 17:00:38+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Longest_Increasing_Subsequence.test.cpp

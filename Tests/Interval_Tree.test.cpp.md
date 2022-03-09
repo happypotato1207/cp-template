@@ -48,7 +48,7 @@ data:
     \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Data_Structures/Interval_Tree.hpp\"\
     \n// Template: Interval Tree (Selective)\n// Doesn't delete range when it overlaps\
     \ but doesn't completely cover/get covered\n// Deletes the smaller/larger interval\
-    \ depending on [keep_small]\n// Averaged query time O(log n)\nclass IntervalTree_Selective\
+    \ depending on [keep_small]\n// Averaged query time O(log n)\n\nclass IntervalTree_Selective\
     \ {\npublic:\n    map<int, int> range;\n    IntervalTree_Selective(bool keep_small)\
     \ {\n        small = keep_small;\n    }\n    void AddRange(int l, int r) {\n \
     \       if (small) {\n            CheckContain(l, r);\n            if (it != range.end())\
@@ -119,7 +119,7 @@ data:
   isVerificationFile: true
   path: Tests/Interval_Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-03-09 16:48:11+08:00'
+  timestamp: '2022-03-09 17:01:28+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Interval_Tree.test.cpp

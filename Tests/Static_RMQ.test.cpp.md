@@ -46,12 +46,13 @@ data:
     , \"w\", stdout);\n        #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
     \tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >>\
     \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Data_Structures/Sparse_Table.hpp\"\
-    \n// Template: Sparse Table\n// Supports range query in O(n log n) / O(1)\n//\
-    \ Offline DS - Cannot update after compute\nclass SparseTable {\npublic:\n   \
-    \ // Method 1: Construct using size\n    SparseTable(int sz) {\n        n = sz\
-    \ + 1;\n        sp.push_back({});\n        sp[0].resize(n);\n    }\n    // Update()\
-    \ can only call before Compute()\n    void Update(int pos, int val) {\n      \
-    \  if (finished) return;\n        sp[0][pos] = val;\n    }\n    // Method 2: Construct\
+    \n// Template: Sparse Table\n// Supports some range queries in O(n log n) / O(1)\n\
+    // Not to be confused with Binary Lifting - O(log n) per query\n// Offline DS\
+    \ - Cannot update after compute\n\nclass SparseTable {\npublic:\n    // Method\
+    \ 1: Construct using size\n    SparseTable(int sz) {\n        n = sz + 1;\n  \
+    \      sp.push_back({});\n        sp[0].resize(n);\n    }\n    // Update() can\
+    \ only call before Compute()\n    void Update(int pos, int val) {\n        if\
+    \ (finished) return;\n        sp[0][pos] = val;\n    }\n    // Method 2: Construct\
     \ using vector\n    SparseTable(vector<int> &v) {\n        n = v.size();\n   \
     \     sp.push_back(v);\n    }\n    // Computes the Sparse Table\n    void Compute()\
     \ {\n        for (int depth = 1; (1 << depth) <= n; depth++) {\n            sp.push_back({});\n\
@@ -60,15 +61,15 @@ data:
     \ - 1][j], sp[depth - 1][j + (1 << (depth - 1))]));\n            }\n        }\n\
     \        finished = true;\n    }\n    // Query [l, r]\n    int Query(int l, int\
     \ r) {\n        if (l > r || l < 0 || r >= n) return 0;\n        if (l == r) return\
-    \ sp[0][l];\n        int depth = floor(log2(r - l));\n        // change below\n\
-    \        return min(sp[depth][l], sp[depth][r - (1 << depth) + 1]);\n    }\nprivate:\n\
-    \    int n;\n    vector<vector<int> > sp;\n    bool finished = false;\n};\n#line\
-    \ 5 \"Tests/Static_RMQ.test.cpp\"\n\nvoid init() {\n\t// initialize\n    \n}\n\
-    void solve(int case_no) {\n\t// implementation\n    int n, q;\n    cin >> n >>\
-    \ q;\n    vector<int> v(n);\n    for (int i = 0; i < n; i++) cin >> v[i];\n  \
-    \  SparseTable ST(v);\n    ST.Compute();\n    while (q--) {\n        int l, r;\n\
-    \        cin >> l >> r;\n        cout << ST.Query(l, r - 1) << endl;\n    }\n\
-    }\n"
+    \ sp[0][l];\n        int depth = floor(log2(r - l));\n        // change function\
+    \ below\n        return min(sp[depth][l], sp[depth][r - (1 << depth) + 1]);\n\
+    \    }\nprivate:\n    int n;\n    vector<vector<int> > sp;\n    bool finished\
+    \ = false;\n};\n#line 5 \"Tests/Static_RMQ.test.cpp\"\n\nvoid init() {\n\t// initialize\n\
+    \    \n}\nvoid solve(int case_no) {\n\t// implementation\n    int n, q;\n    cin\
+    \ >> n >> q;\n    vector<int> v(n);\n    for (int i = 0; i < n; i++) cin >> v[i];\n\
+    \    SparseTable ST(v);\n    ST.Compute();\n    while (q--) {\n        int l,\
+    \ r;\n        cin >> l >> r;\n        cout << ST.Query(l, r - 1) << endl;\n  \
+    \  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include\
     \ \"../header.cpp\"\n#include \"../Data_Structures/Sparse_Table.hpp\"\n\nvoid\
     \ init() {\n\t// initialize\n    \n}\nvoid solve(int case_no) {\n\t// implementation\n\
@@ -82,7 +83,7 @@ data:
   isVerificationFile: true
   path: Tests/Static_RMQ.test.cpp
   requiredBy: []
-  timestamp: '2022-03-07 23:53:12+08:00'
+  timestamp: '2022-03-09 17:03:23+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Static_RMQ.test.cpp
