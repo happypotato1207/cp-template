@@ -1,3 +1,7 @@
+// Template: MST - Kruskal's algorithm
+// O(n log n) for every call to ComputeMST()
+// After calling ComputeMST(), the edges will be stored in [res]
+
 #include "DSU.hpp"
 
 struct edge {
