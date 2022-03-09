@@ -2,6 +2,7 @@
 // I'm really not familiar with flow, will learn more soon
 // Theoreticall should be O(nm / [some constant]), where n is no. of nodes and m is no. of edges
 // Dinic's algorithm works in O(n sqrt(n)), will code template asap
+
 class BipartiteMatching {
 public:
 	BipartiteMatching(int l, int r) {
