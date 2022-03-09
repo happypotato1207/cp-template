@@ -1,6 +1,7 @@
 // Template: Sparse Table
 // Supports range query in O(n log n) / O(1)
 // Offline DS - Cannot update after compute
+
 class SparseTable {
 public:
     // Method 1: Construct using size
@@ -35,7 +36,7 @@ public:
         if (l > r || l < 0 || r >= n) return 0;
         if (l == r) return sp[0][l];
         int depth = floor(log2(r - l));
-        // change below
+        // change function below
         return min(sp[depth][l], sp[depth][r - (1 << depth) + 1]);
     }
 private:
