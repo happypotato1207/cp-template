@@ -46,7 +46,10 @@ data:
     , \"w\", stdout);\n        #endif\n\tios::sync_with_stdio(false);\n\tcin.tie(NULL);\n\
     \tcout.tie(NULL);\n\tsrand(time(NULL));\n\tinit();\n\tint t = 1;\n\t// cin >>\
     \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Graph/DSU.hpp\"\
-    \nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int n, bool directed_temp\
+    \n// Template: Disjoint Set Union\n// Maintaining and merging sets of nodes\n\
+    // O(\\alpha(n)) per query, where \\alpha(n) is inverse Ackermann function (basically\
+    \ O(1) as \\alpha(10^600) < 4)\n// Without path compression, O(log n) per query\n\
+    class DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int n, bool directed_temp\
     \ = false, bool path_compression_temp = true) {\n\t\tparent.resize(n + 1, -1);\n\
     \t\trank.resize(n + 1, 1);\n\t\tsize.resize(n + 1, 1);\n\t\tdirected = directed_temp;\n\
     \t\tpath_compression = path_compression_temp;\n\t}\n\tint FindRoot(int u) {\n\t\
@@ -78,7 +81,7 @@ data:
   isVerificationFile: true
   path: Tests/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2022-03-01 01:28:11+08:00'
+  timestamp: '2022-03-09 16:57:19+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/UnionFind.test.cpp

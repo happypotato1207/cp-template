@@ -52,8 +52,11 @@ data:
     \ t;\n\tfor (int i = 1; i <= t; i++) solve(i);\n}\n/*\n *\n */\n#line 1 \"Graph/MST_Kruskal.hpp\"\
     \n// Template: MST - Kruskal's algorithm\n// O(n log n) for every call to ComputeMST()\n\
     // After calling ComputeMST(), the edges will be stored in [res]\n\n#line 1 \"\
-    Graph/DSU.hpp\"\nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int n,\
-    \ bool directed_temp = false, bool path_compression_temp = true) {\n\t\tparent.resize(n\
+    Graph/DSU.hpp\"\n// Template: Disjoint Set Union\n// Maintaining and merging sets\
+    \ of nodes\n// O(\\alpha(n)) per query, where \\alpha(n) is inverse Ackermann\
+    \ function (basically O(1) as \\alpha(10^600) < 4)\n// Without path compression,\
+    \ O(log n) per query\nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int\
+    \ n, bool directed_temp = false, bool path_compression_temp = true) {\n\t\tparent.resize(n\
     \ + 1, -1);\n\t\trank.resize(n + 1, 1);\n\t\tsize.resize(n + 1, 1);\n\t\tdirected\
     \ = directed_temp;\n\t\tpath_compression = path_compression_temp;\n\t}\n\tint\
     \ FindRoot(int u) {\n\t\tif (parent[u] == -1) return u;\n\t\tif (path_compression)\
@@ -95,7 +98,7 @@ data:
   isVerificationFile: true
   path: Tests/Minimum_Spanning_Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-03-09 16:50:22+08:00'
+  timestamp: '2022-03-09 16:57:19+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Minimum_Spanning_Tree.test.cpp
