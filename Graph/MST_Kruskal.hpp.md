@@ -5,13 +5,10 @@ data:
     path: Graph/DSU.hpp
     title: Graph/DSU.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: Tests/Minimum_Spanning_Tree.test.cpp
-    title: Tests/Minimum_Spanning_Tree.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/MST_Kruskal.hpp\"\n// Template: MST - Kruskal's algorithm\n\
@@ -59,10 +56,9 @@ data:
   isVerificationFile: false
   path: Graph/MST_Kruskal.hpp
   requiredBy: []
-  timestamp: '2022-03-09 16:47:13+08:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - Tests/Minimum_Spanning_Tree.test.cpp
+  timestamp: '2022-03-09 16:50:05+08:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: Graph/MST_Kruskal.hpp
 layout: document
 redirect_from:
