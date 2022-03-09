@@ -1,5 +1,6 @@
 // Template: Sparse Table
-// Supports range query in O(n log n) / O(1)
+// Supports some range queries in O(n log n) / O(1)
+// Not to be confused with Binary Lifting
 // Offline DS - Cannot update after compute
 
 class SparseTable {
