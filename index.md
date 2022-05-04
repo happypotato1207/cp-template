@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: Data_Structures
     pages:
+    - icon: ':warning:'
+      path: Data_Structures/Implicit_Segment_Tree.hpp
+      title: Data_Structures/Implicit_Segment_Tree.hpp
     - icon: ':heavy_check_mark:'
       path: Data_Structures/Interval_Tree.hpp
       title: Data_Structures/Interval_Tree.hpp
@@ -36,6 +39,11 @@ data:
     - icon: ':warning:'
       path: Miscellaneous/RNG.hpp
       title: Miscellaneous/RNG.hpp
+  - name: Tree
+    pages:
+    - icon: ':warning:'
+      path: Tree/HLD.hpp
+      title: Tree/HLD.hpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
