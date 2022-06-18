@@ -1,5 +1,6 @@
 // Range Assign Range Sum Query (Implicit)
 // Tested on CF, validate later
+//
 struct node {
     int val;
     int l, r;
