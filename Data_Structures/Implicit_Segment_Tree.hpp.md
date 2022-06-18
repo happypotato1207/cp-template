@@ -9,10 +9,10 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"Data_Structures/Implicit_Segment_Tree.hpp\"\n// Range Assign\
-    \ Range Sum Query (Implicit)\n// Tested on CF, validate later\nstruct node {\n\
-    \    int val;\n    int l, r;\n    node *left = nullptr, *right = nullptr;\n  \
-    \  bool marked = false;\n    int lazy = 0;\n    node(int l, int r, int val = 0):\
-    \ l(l), r(r), val(val) {}\n};\nnode* seg = new node(0, 100000);\nvoid extend(node*\
+    \ Range Sum Query (Implicit)\n// Tested on CF, validate later\n//\nstruct node\
+    \ {\n    int val;\n    int l, r;\n    node *left = nullptr, *right = nullptr;\n\
+    \    bool marked = false;\n    int lazy = 0;\n    node(int l, int r, int val =\
+    \ 0): l(l), r(r), val(val) {}\n};\nnode* seg = new node(0, 100000);\nvoid extend(node*\
     \ cur) {\n    if (cur->left != nullptr) return;\n    int mid = (cur->l + cur->r)\
     \ >> 1;\n    cur->left = new node(cur->l, mid);\n    cur->right = new node(mid\
     \ + 1, cur->r);\n    return;\n}\nvoid pushdown(node* cur) {\n    extend(cur);\n\
@@ -33,9 +33,9 @@ data:
     \    if (tr > mid) res += query(max(tl, mid + 1), tr, cur->right);\n    return\
     \ res;\n}\n"
   code: "// Range Assign Range Sum Query (Implicit)\n// Tested on CF, validate later\n\
-    struct node {\n    int val;\n    int l, r;\n    node *left = nullptr, *right =\
-    \ nullptr;\n    bool marked = false;\n    int lazy = 0;\n    node(int l, int r,\
-    \ int val = 0): l(l), r(r), val(val) {}\n};\nnode* seg = new node(0, 100000);\n\
+    //\nstruct node {\n    int val;\n    int l, r;\n    node *left = nullptr, *right\
+    \ = nullptr;\n    bool marked = false;\n    int lazy = 0;\n    node(int l, int\
+    \ r, int val = 0): l(l), r(r), val(val) {}\n};\nnode* seg = new node(0, 100000);\n\
     void extend(node* cur) {\n    if (cur->left != nullptr) return;\n    int mid =\
     \ (cur->l + cur->r) >> 1;\n    cur->left = new node(cur->l, mid);\n    cur->right\
     \ = new node(mid + 1, cur->r);\n    return;\n}\nvoid pushdown(node* cur) {\n \
@@ -59,7 +59,7 @@ data:
   isVerificationFile: false
   path: Data_Structures/Implicit_Segment_Tree.hpp
   requiredBy: []
-  timestamp: '2022-05-05 00:22:03+08:00'
+  timestamp: '2022-06-18 16:27:56+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Data_Structures/Implicit_Segment_Tree.hpp
