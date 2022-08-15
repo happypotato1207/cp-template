@@ -38,7 +38,7 @@ data:
   isVerificationFile: true
   path: Tests/Longest_Increasing_Subsequence.test.cpp
   requiredBy: []
-  timestamp: '2022-08-15 02:09:20+08:00'
+  timestamp: '2022-08-15 22:31:09+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Longest_Increasing_Subsequence.test.cpp
