@@ -27,8 +27,8 @@ void solve(int case_no);
 
 signed main() {
 #ifdef POTATO
-    freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
+    freopen("../input.txt", "r", stdin);
+    // freopen("../output.txt", "w", stdout);
 #endif
     ios::sync_with_stdio(false);
     cin.tie(NULL);
