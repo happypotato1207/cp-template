@@ -1,7 +1,7 @@
 // Template: Disjoint Set Union
 // Maintaining and merging sets of nodes
 // O(\alpha(n)) per query, where \alpha(n) is inverse Ackermann function (basically O(1) as \alpha(10^600) < 4)
-// Without path compression, O(log n) per query
+// Without path compression, O(\log n) per query
 
 class DisjointSetUnion {
 public:
