@@ -19,7 +19,7 @@ data:
     \ edges will be stored in [res]\n\n#line 1 \"Graph/DSU.hpp\"\n// Template: Disjoint\
     \ Set Union\n// Maintaining and merging sets of nodes\n// O(\\alpha(n)) per query,\
     \ where \\alpha(n) is inverse Ackermann function (basically O(1) as \\alpha(10^600)\
-    \ < 4)\n// Without path compression, O(log n) per query\n\nclass DisjointSetUnion\
+    \ < 4)\n// Without path compression, O(\\log n) per query\n\nclass DisjointSetUnion\
     \ {\npublic:\n\tDisjointSetUnion(int n, bool directed_temp = false, bool path_compression_temp\
     \ = true) {\n\t\tparent.resize(n + 1, -1);\n\t\trank.resize(n + 1, 1);\n\t\tsize.resize(n\
     \ + 1, 1);\n\t\tdirected = directed_temp;\n\t\tpath_compression = path_compression_temp;\n\
@@ -62,7 +62,7 @@ data:
   isVerificationFile: false
   path: Graph/MST_Kruskal.hpp
   requiredBy: []
-  timestamp: '2022-03-09 17:01:03+08:00'
+  timestamp: '2022-08-15 15:32:19+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/Minimum_Spanning_Tree.test.cpp
