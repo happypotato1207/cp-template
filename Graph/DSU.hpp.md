@@ -20,47 +20,50 @@ data:
   bundledCode: "#line 1 \"Graph/DSU.hpp\"\n// Template: Disjoint Set Union\n// Maintaining\
     \ and merging sets of nodes\n// O(\\alpha(n)) per query, where \\alpha(n) is inverse\
     \ Ackermann function (basically O(1) as \\alpha(10^600) < 4)\n// Without path\
-    \ compression, O(\\log n) per query\n\nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int\
-    \ n, bool directed_temp = false, bool path_compression_temp = true) {\n\t\tparent.resize(n\
-    \ + 1, -1);\n\t\trank.resize(n + 1, 1);\n\t\tsize.resize(n + 1, 1);\n\t\tdirected\
-    \ = directed_temp;\n\t\tpath_compression = path_compression_temp;\n\t}\n\tint\
-    \ FindRoot(int u) {\n\t\tif (parent[u] == -1) return u;\n\t\tif (path_compression)\
-    \ return parent[u] = FindRoot(parent[u]);\n\t\telse return FindRoot(parent[u]);\n\
-    \t}\n\tbool Union(int u, int v) { // if directed then assign u -> v\n\t\tu = FindRoot(u);\n\
-    \t\tv = FindRoot(v);\n\t\tif (u != v) {\n\t\t\tif (!directed) {\n\t\t\t\tif (rank[u]\
-    \ < rank[v]) swap(u, v);\n\t\t\t}\n\t\t\tparent[u] = v;\n\t\t\trank[u] = rank[v]\
-    \ + 1;\n\t\t\tsize[v] += size[u];\n\t\t\treturn true;\n\t\t}\n\t\treturn false;\n\
-    \t}\n\tbool CheckConnected(int u, int v) {\n\t\treturn (FindRoot(u) == FindRoot(v));\n\
-    \t}\n\tint GetRank(int u) {\n\t\treturn rank[u];\n\t}\n\tint GetSize(int u) {\n\
-    \t\treturn size[FindRoot(u)];\n\t}\n\tvoid Reset() {\n\t\tfor (int i = 0; i <\
-    \ parent.size(); i++) {\n\t\t\tparent[i] = -1;\n\t\t\trank[i] = 1;\n\t\t\tsize[i]\
-    \ = 1;\n\t\t}\n\t}\nprivate:\n\tvector<int> parent, rank, size;\n\tbool directed,\
-    \ path_compression;\n};\n"
+    \ compression, O(\\log n) per query\n\nclass DisjointSetUnion {\npublic:\n   \
+    \ DisjointSetUnion(int n, bool directed_temp = false, bool path_compression_temp\
+    \ = true) {\n        par.resize(n + 1, -1);\n        rr.resize(n + 1, 1);\n  \
+    \      sz.resize(n + 1, 1);\n        directed = directed_temp;\n        path_compression\
+    \ = path_compression_temp;\n    }\n    int FindRoot(int u) {\n        if (par[u]\
+    \ == -1) return u;\n        if (path_compression) return par[u] = FindRoot(par[u]);\n\
+    \        else return FindRoot(par[u]);\n    }\n    bool Union(int u, int v) {\
+    \ // if directed then assign u -> v\n        u = FindRoot(u);\n        v = FindRoot(v);\n\
+    \        if (u != v) {\n            if (!directed) {\n                if (sz[u]\
+    \ < sz[v]) swap(u, v);\n            }\n            par[v] = u;\n            rr[v]\
+    \ = rr[u] + 1;\n            sz[u] += sz[v];\n            return true;\n      \
+    \  }\n        return false;\n    }\n    bool CheckConnected(int u, int v) {\n\
+    \        return (FindRoot(u) == FindRoot(v));\n    }\n    int GetRank(int u) {\n\
+    \        return rr[u];\n    }\n    int GetSize(int u) {\n        return sz[FindRoot(u)];\n\
+    \    }\n    void Reset() {\n        for (int i = 0; i < par.size(); i++) {\n \
+    \           par[i] = -1;\n            rr[i] = 1;\n            sz[i] = 1;\n   \
+    \     }\n    }\nprivate:\n    vector<int> par, rr, sz;\n    bool directed, path_compression;\n\
+    };\n"
   code: "// Template: Disjoint Set Union\n// Maintaining and merging sets of nodes\n\
     // O(\\alpha(n)) per query, where \\alpha(n) is inverse Ackermann function (basically\
     \ O(1) as \\alpha(10^600) < 4)\n// Without path compression, O(\\log n) per query\n\
-    \nclass DisjointSetUnion {\npublic:\n\tDisjointSetUnion(int n, bool directed_temp\
-    \ = false, bool path_compression_temp = true) {\n\t\tparent.resize(n + 1, -1);\n\
-    \t\trank.resize(n + 1, 1);\n\t\tsize.resize(n + 1, 1);\n\t\tdirected = directed_temp;\n\
-    \t\tpath_compression = path_compression_temp;\n\t}\n\tint FindRoot(int u) {\n\t\
-    \tif (parent[u] == -1) return u;\n\t\tif (path_compression) return parent[u] =\
-    \ FindRoot(parent[u]);\n\t\telse return FindRoot(parent[u]);\n\t}\n\tbool Union(int\
-    \ u, int v) { // if directed then assign u -> v\n\t\tu = FindRoot(u);\n\t\tv =\
-    \ FindRoot(v);\n\t\tif (u != v) {\n\t\t\tif (!directed) {\n\t\t\t\tif (rank[u]\
-    \ < rank[v]) swap(u, v);\n\t\t\t}\n\t\t\tparent[u] = v;\n\t\t\trank[u] = rank[v]\
-    \ + 1;\n\t\t\tsize[v] += size[u];\n\t\t\treturn true;\n\t\t}\n\t\treturn false;\n\
-    \t}\n\tbool CheckConnected(int u, int v) {\n\t\treturn (FindRoot(u) == FindRoot(v));\n\
-    \t}\n\tint GetRank(int u) {\n\t\treturn rank[u];\n\t}\n\tint GetSize(int u) {\n\
-    \t\treturn size[FindRoot(u)];\n\t}\n\tvoid Reset() {\n\t\tfor (int i = 0; i <\
-    \ parent.size(); i++) {\n\t\t\tparent[i] = -1;\n\t\t\trank[i] = 1;\n\t\t\tsize[i]\
-    \ = 1;\n\t\t}\n\t}\nprivate:\n\tvector<int> parent, rank, size;\n\tbool directed,\
-    \ path_compression;\n};\n"
+    \nclass DisjointSetUnion {\npublic:\n    DisjointSetUnion(int n, bool directed_temp\
+    \ = false, bool path_compression_temp = true) {\n        par.resize(n + 1, -1);\n\
+    \        rr.resize(n + 1, 1);\n        sz.resize(n + 1, 1);\n        directed\
+    \ = directed_temp;\n        path_compression = path_compression_temp;\n    }\n\
+    \    int FindRoot(int u) {\n        if (par[u] == -1) return u;\n        if (path_compression)\
+    \ return par[u] = FindRoot(par[u]);\n        else return FindRoot(par[u]);\n \
+    \   }\n    bool Union(int u, int v) { // if directed then assign u -> v\n    \
+    \    u = FindRoot(u);\n        v = FindRoot(v);\n        if (u != v) {\n     \
+    \       if (!directed) {\n                if (sz[u] < sz[v]) swap(u, v);\n   \
+    \         }\n            par[v] = u;\n            rr[v] = rr[u] + 1;\n       \
+    \     sz[u] += sz[v];\n            return true;\n        }\n        return false;\n\
+    \    }\n    bool CheckConnected(int u, int v) {\n        return (FindRoot(u) ==\
+    \ FindRoot(v));\n    }\n    int GetRank(int u) {\n        return rr[u];\n    }\n\
+    \    int GetSize(int u) {\n        return sz[FindRoot(u)];\n    }\n    void Reset()\
+    \ {\n        for (int i = 0; i < par.size(); i++) {\n            par[i] = -1;\n\
+    \            rr[i] = 1;\n            sz[i] = 1;\n        }\n    }\nprivate:\n\
+    \    vector<int> par, rr, sz;\n    bool directed, path_compression;\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/DSU.hpp
   requiredBy:
   - Graph/MST_Kruskal.hpp
-  timestamp: '2022-08-15 15:32:19+08:00'
+  timestamp: '2022-08-15 15:34:59+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/UnionFind.test.cpp

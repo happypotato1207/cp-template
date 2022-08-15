@@ -43,7 +43,7 @@ data:
   isVerificationFile: true
   path: Tests/Minimum_Spanning_Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-08-15 15:32:19+08:00'
+  timestamp: '2022-08-15 15:34:59+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Minimum_Spanning_Tree.test.cpp
