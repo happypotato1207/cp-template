@@ -6,7 +6,7 @@
 void init() {
 	
 }
-void solve(int case_no) {
+void solve(int &case_no) {
 	int n, q;
 	cin >> n >> q;
 	vector<Data> v(n);
