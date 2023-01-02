@@ -2,6 +2,7 @@
 // Finds b^p mod m in O(log p)
 // Mod inverse is application of Fermat's little theorem
 // [MOD] must be a prime to use modinv()
+// Please define MOD before these functions (or change the parameter accordingly)
 
 //const int MOD = 1e9 + 7;
 int bigmod(int b, int p, const int &m = MOD) {
