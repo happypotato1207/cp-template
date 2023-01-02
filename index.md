@@ -33,7 +33,7 @@ data:
       title: Graph/MST_Kruskal.hpp
   - name: Math
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: Math/Big Mod.hpp
       title: Math/Big Mod.hpp
     - icon: ':warning:'
@@ -78,6 +78,9 @@ data:
     - icon: ':x:'
       path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
       title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
+    - icon: ':x:'
+      path: Tests/Power.test.cpp
+      title: Tests/Power.test.cpp
     - icon: ':x:'
       path: Tests/Static_RMQ.test.cpp
       title: Tests/Static_RMQ.test.cpp

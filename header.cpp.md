@@ -22,6 +22,9 @@ data:
     path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
     title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
   - icon: ':x:'
+    path: Tests/Power.test.cpp
+    title: Tests/Power.test.cpp
+  - icon: ':x:'
     path: Tests/Static_RMQ.test.cpp
     title: Tests/Static_RMQ.test.cpp
   - icon: ':x:'
@@ -67,6 +70,7 @@ data:
   - Tests/Matching_on_Bipartite_Graph.test.cpp
   - Tests/Point_Add_Range_Sum_(Assign).test.cpp
   - Tests/Longest_Increasing_Subsequence.test.cpp
+  - Tests/Power.test.cpp
   - Tests/Minimum_Spanning_Tree.test.cpp
   - Tests/UnionFind.test.cpp
   - Tests/Point_Add_Range_Sum_(Add).test.cpp
