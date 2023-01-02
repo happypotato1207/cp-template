@@ -31,6 +31,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/MST_Kruskal.hpp
       title: Graph/MST_Kruskal.hpp
+  - name: Math
+    pages:
+    - icon: ':warning:'
+      path: Math/NTT.hpp
+      title: Math/NTT.hpp
   - name: Miscellaneous
     pages:
     - icon: ':heavy_check_mark:'

@@ -66,8 +66,8 @@ data:
   timestamp: '2022-08-15 15:34:59+08:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - Tests/UnionFind.test.cpp
   - Tests/Minimum_Spanning_Tree.test.cpp
+  - Tests/UnionFind.test.cpp
 documentation_of: Graph/DSU.hpp
 layout: document
 redirect_from:
