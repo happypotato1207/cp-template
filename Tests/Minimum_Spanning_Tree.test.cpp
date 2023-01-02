@@ -7,7 +7,7 @@ void init() {
 	// initialize
 
 }
-void solve(int case_no) {
+void solve(int &case_no) {
 	// implementation
     int n, m;
     cin >> n >> m;
