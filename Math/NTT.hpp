@@ -3,6 +3,8 @@
 // Time complexity: O(n log n), n is degree of polynomial
 
 const int MOD = 998244353;
+
+#include "Big Mod.hpp"
 int bigmod(int b, int p) {
 	b %= MOD;
 	if (b == 0) return 0;
@@ -16,6 +18,7 @@ int bigmod(int b, int p) {
 int modinv(int x) {
 	return bigmod(x, MOD - 2);
 }
+
 void NTT(vector<int> &v, bool invert) {
 	int n = v.size();
 
