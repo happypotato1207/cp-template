@@ -23,7 +23,7 @@ inline void out(T temp) { cout << temp << endl; return; }
 // global
 
 void init();
-void solve(int case_no);
+void solve(int &case_no);
 
 signed main() {
 #ifdef POTATO
