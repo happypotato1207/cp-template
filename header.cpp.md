@@ -3,36 +3,39 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
+    path: Tests/Big Mod.test.cpp
+    title: Tests/Big Mod.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Tests/Convolution.test.cpp
+    title: Tests/Convolution.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Tests/Interval_Tree.test.cpp
     title: Tests/Interval_Tree.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Longest_Increasing_Subsequence.test.cpp
     title: Tests/Longest_Increasing_Subsequence.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Matching_on_Bipartite_Graph.test.cpp
     title: Tests/Matching_on_Bipartite_Graph.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Minimum_Spanning_Tree.test.cpp
     title: Tests/Minimum_Spanning_Tree.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Point_Add_Range_Sum_(Add).test.cpp
     title: Tests/Point_Add_Range_Sum_(Add).test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
     title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
-  - icon: ':x:'
-    path: Tests/Power.test.cpp
-    title: Tests/Power.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Static_RMQ.test.cpp
     title: Tests/Static_RMQ.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -63,14 +66,15 @@ data:
   path: header.cpp
   requiredBy: []
   timestamp: '2023-01-02 22:59:31+08:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/Static_RMQ.test.cpp
   - Tests/Interval_Tree.test.cpp
+  - Tests/Convolution.test.cpp
+  - Tests/Big Mod.test.cpp
   - Tests/Matching_on_Bipartite_Graph.test.cpp
   - Tests/Point_Add_Range_Sum_(Assign).test.cpp
   - Tests/Longest_Increasing_Subsequence.test.cpp
-  - Tests/Power.test.cpp
   - Tests/Minimum_Spanning_Tree.test.cpp
   - Tests/UnionFind.test.cpp
   - Tests/Point_Add_Range_Sum_(Add).test.cpp

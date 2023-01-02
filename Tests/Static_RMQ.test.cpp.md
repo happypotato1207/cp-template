@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Data_Structures/Sparse_Table.hpp
     title: Data_Structures/Sparse_Table.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: header.cpp
     title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/staticrmq
@@ -31,7 +31,7 @@ data:
     \ than include guards\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include\
     \ \"../header.cpp\"\n#include \"../Data_Structures/Sparse_Table.hpp\"\n\nvoid\
-    \ init() {\n\t// initialize\n    \n}\nvoid solve(int case_no) {\n\t// implementation\n\
+    \ init() {\n\t// initialize\n    \n}\nvoid solve(int &case_no) {\n\t// implementation\n\
     \    int n, q;\n    cin >> n >> q;\n    vector<int> v(n);\n    for (int i = 0;\
     \ i < n; i++) cin >> v[i];\n    SparseTable ST(v);\n    ST.Compute();\n    while\
     \ (q--) {\n        int l, r;\n        cin >> l >> r;\n        cout << ST.Query(l,\
@@ -42,8 +42,8 @@ data:
   isVerificationFile: true
   path: Tests/Static_RMQ.test.cpp
   requiredBy: []
-  timestamp: '2023-01-02 22:59:31+08:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-01-02 23:19:34+08:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Static_RMQ.test.cpp
 layout: document

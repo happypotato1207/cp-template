@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Math/Big Mod.hpp
     title: Math/Big Mod.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Tests/Convolution.test.cpp
+    title: Tests/Convolution.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/NTT.hpp\"\n// Template: NTT for multiplying 2 polynomials\n\
@@ -68,8 +71,9 @@ data:
   path: Math/NTT.hpp
   requiredBy: []
   timestamp: '2023-01-02 23:13:52+08:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - Tests/Convolution.test.cpp
 documentation_of: Math/NTT.hpp
 layout: document
 redirect_from:

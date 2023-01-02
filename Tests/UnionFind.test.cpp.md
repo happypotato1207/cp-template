@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/DSU.hpp
     title: Graph/DSU.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: header.cpp
     title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/unionfind
@@ -31,18 +31,18 @@ data:
     \ than include guards\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include\
     \ \"../header.cpp\"\n#include \"../Graph/DSU.hpp\"\n\nvoid init() {\n\t// initialize\n\
-    \n}\nvoid solve(int case_no) {\n\t// implementation\n\tint n, q;\n\tcin >> n >>\
-    \ q;\n\tDisjointSetUnion DSU(n);\n\twhile (q--) {\n\t\tint cmd, u, v;\n\t\tcin\
-    \ >> cmd >> u >> v;\n\t\tif (cmd == 0) {\n\t\t\tDSU.Union(u, v);\n\t\t} else {\n\
-    \t\t\tcout << DSU.CheckConnected(u, v) << endl;\n\t\t}\n\t}\n}\n"
+    \n}\nvoid solve(int &case_no) {\n\t// implementation\n\tint n, q;\n\tcin >> n\
+    \ >> q;\n\tDisjointSetUnion DSU(n);\n\twhile (q--) {\n\t\tint cmd, u, v;\n\t\t\
+    cin >> cmd >> u >> v;\n\t\tif (cmd == 0) {\n\t\t\tDSU.Union(u, v);\n\t\t} else\
+    \ {\n\t\t\tcout << DSU.CheckConnected(u, v) << endl;\n\t\t}\n\t}\n}\n"
   dependsOn:
   - header.cpp
   - Graph/DSU.hpp
   isVerificationFile: true
   path: Tests/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2023-01-02 22:59:31+08:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-01-02 23:19:45+08:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/UnionFind.test.cpp
 layout: document

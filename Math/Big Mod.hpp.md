@@ -2,16 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Math/NTT.hpp
     title: Math/NTT.hpp
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: Tests/Power.test.cpp
-    title: Tests/Power.test.cpp
-  _isVerificationFailed: true
+  - icon: ':heavy_check_mark:'
+    path: Tests/Big Mod.test.cpp
+    title: Tests/Big Mod.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Tests/Convolution.test.cpp
+    title: Tests/Convolution.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/Big Mod.hpp\"\n// Template: Big Mod / Mod inverse\n\
@@ -36,9 +39,10 @@ data:
   requiredBy:
   - Math/NTT.hpp
   timestamp: '2023-01-02 23:13:52+08:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - Tests/Power.test.cpp
+  - Tests/Convolution.test.cpp
+  - Tests/Big Mod.test.cpp
 documentation_of: Math/Big Mod.hpp
 layout: document
 redirect_from:

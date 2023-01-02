@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: Miscellaneous/LIS_LDS.hpp
-    title: Miscellaneous/LIS_LDS.hpp
+    path: Math/Big Mod.hpp
+    title: Math/Big Mod.hpp
   - icon: ':heavy_check_mark:'
     path: header.cpp
     title: header.cpp
@@ -14,9 +14,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/1/NTL_1_B
     links:
-    - https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/1/NTL_1_B
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -29,24 +29,24 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ header.cpp: line 13: unable to process #include in #if / #ifdef / #ifndef other\
     \ than include guards\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_D\"\n\n\
-    #include \"../header.cpp\"\n#include \"../Miscellaneous/LIS_LDS.hpp\"\n\nvoid\
-    \ init() {\n\t// initialize\n\n}\nvoid solve(int &case_no) {\n\t// implementation\n\
-    \tint n;\n\tcin >> n;\n\tvector<int> v(n);\n\tfor (int i = 0; i < n; i++) cin\
-    \ >> v[i];\n\tcout << LIS(v).size() << endl;\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/1/NTL_1_B\"\
+    \n\n#include \"../header.cpp\"\n\nconst int MOD = 1e9 + 7;\n#include \"../Math/Big\
+    \ Mod.hpp\"\n\nvoid init() {\n\t// initialize\n\n}\nvoid solve(int &case_no) {\n\
+    \t// implementation\n\tint n, m;\n\tcin >> n >> m;\n\tcout << bigmod(n, m) <<\
+    \ endl;\n}\n"
   dependsOn:
   - header.cpp
-  - Miscellaneous/LIS_LDS.hpp
+  - Math/Big Mod.hpp
   isVerificationFile: true
-  path: Tests/Longest_Increasing_Subsequence.test.cpp
+  path: Tests/Big Mod.test.cpp
   requiredBy: []
-  timestamp: '2023-01-02 23:18:41+08:00'
+  timestamp: '2023-01-02 23:18:18+08:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: Tests/Longest_Increasing_Subsequence.test.cpp
+documentation_of: Tests/Big Mod.test.cpp
 layout: document
 redirect_from:
-- /verify/Tests/Longest_Increasing_Subsequence.test.cpp
-- /verify/Tests/Longest_Increasing_Subsequence.test.cpp.html
-title: Tests/Longest_Increasing_Subsequence.test.cpp
+- /verify/Tests/Big Mod.test.cpp
+- /verify/Tests/Big Mod.test.cpp.html
+title: Tests/Big Mod.test.cpp
 ---

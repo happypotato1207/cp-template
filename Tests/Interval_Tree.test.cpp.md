@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Data_Structures/Interval_Tree.hpp
     title: Data_Structures/Interval_Tree.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: header.cpp
     title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/1148
@@ -31,7 +31,7 @@ data:
     \ than include guards\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/1148\"\n\n#include\
     \ \"../header.cpp\"\n#include \"../Data_Structures/Interval_Tree.hpp\"\n\nvoid\
-    \ init() {\n\t// initialize\n    \n}\nvoid solve(int case_no) {\n\t// implementation\n\
+    \ init() {\n\t// initialize\n    \n}\nvoid solve(int &case_no) {\n\t// implementation\n\
     \    int n, m;\n    vector<IntervalTree_Selective> record;\n    while (true) {\n\
     \        cin >> n >> m;\n        if (n == 0 && m == 0) return;\n        record.clear();\n\
     \        IntervalTree_Selective temp(false);\n        for (int i = 0; i <= m;\
@@ -54,8 +54,8 @@ data:
   isVerificationFile: true
   path: Tests/Interval_Tree.test.cpp
   requiredBy: []
-  timestamp: '2023-01-02 22:59:31+08:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-01-02 23:18:29+08:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Interval_Tree.test.cpp
 layout: document

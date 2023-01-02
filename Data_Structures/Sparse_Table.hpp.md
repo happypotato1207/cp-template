@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Tests/Static_RMQ.test.cpp
     title: Tests/Static_RMQ.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Data_Structures/Sparse_Table.hpp\"\n// Template: Sparse\
@@ -54,7 +54,7 @@ data:
   path: Data_Structures/Sparse_Table.hpp
   requiredBy: []
   timestamp: '2022-03-09 17:03:23+08:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Tests/Static_RMQ.test.cpp
 documentation_of: Data_Structures/Sparse_Table.hpp

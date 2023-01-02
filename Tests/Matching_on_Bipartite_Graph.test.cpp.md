@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Flow/Bipartite_Matching.hpp
     title: Flow/Bipartite_Matching.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: header.cpp
     title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/bipartitematching
@@ -31,7 +31,7 @@ data:
     \ than include guards\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/bipartitematching\"\n\n\
     #include \"../header.cpp\"\n#include \"../Flow/Bipartite_Matching.hpp\"\n\nvoid\
-    \ init() {\n\t// initialize\n\n}\nvoid solve(int case_no) {\n\t// implementation\n\
+    \ init() {\n\t// initialize\n\n}\nvoid solve(int &case_no) {\n\t// implementation\n\
     \tint l, r, m;\n\tscanf(\"%d %d %d\", &l, &r, &m);\n\tBipartiteMatching BM(l,\
     \ r);\n\twhile (m--) {\n\t\tint u, v;\n\t\tscanf(\"%d %d\", &u, &v);\n\t\tu++;\
     \ v++;\n\t\tBM.AddEdge(u, v);\n\t}\n\tvector<pii> ans = BM.FindMatching();\n\t\
@@ -43,8 +43,8 @@ data:
   isVerificationFile: true
   path: Tests/Matching_on_Bipartite_Graph.test.cpp
   requiredBy: []
-  timestamp: '2023-01-02 22:59:31+08:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-01-02 23:18:52+08:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Tests/Matching_on_Bipartite_Graph.test.cpp
 layout: document
