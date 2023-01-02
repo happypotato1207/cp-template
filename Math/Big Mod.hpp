@@ -3,7 +3,7 @@
 // Mod inverse is application of Fermat's little theorem
 // [MOD] must be a prime to use modinv()
 
-const int MOD = 1e9 + 7;
+//const int MOD = 1e9 + 7;
 int bigmod(int b, int p, const int &m = MOD) {
 	b %= m;
 	if (b == 0) return 0;
