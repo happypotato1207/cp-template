@@ -34,6 +34,9 @@ data:
   - name: Math
     pages:
     - icon: ':warning:'
+      path: Math/Big Mod.hpp
+      title: Math/Big Mod.hpp
+    - icon: ':warning:'
       path: Math/NTT.hpp
       title: Math/NTT.hpp
   - name: Miscellaneous
