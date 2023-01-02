@@ -7,7 +7,7 @@ void init() {
 	// initialize
 
 }
-void solve(int case_no) {
+void solve(int &case_no) {
 	// implementation
 	int l, r, m;
 	scanf("%d %d %d", &l, &r, &m);
