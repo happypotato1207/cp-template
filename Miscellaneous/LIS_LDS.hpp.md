@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Longest_Increasing_Subsequence.test.cpp
     title: Tests/Longest_Increasing_Subsequence.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Miscellaneous/LIS_LDS.hpp\"\n// Template: Longest Increasing/Decreasing\
@@ -58,7 +58,7 @@ data:
   path: Miscellaneous/LIS_LDS.hpp
   requiredBy: []
   timestamp: '2022-03-09 17:00:38+08:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Tests/Longest_Increasing_Subsequence.test.cpp
 documentation_of: Miscellaneous/LIS_LDS.hpp

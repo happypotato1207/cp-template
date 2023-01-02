@@ -3,33 +3,33 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Interval_Tree.test.cpp
     title: Tests/Interval_Tree.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Longest_Increasing_Subsequence.test.cpp
     title: Tests/Longest_Increasing_Subsequence.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Matching_on_Bipartite_Graph.test.cpp
     title: Tests/Matching_on_Bipartite_Graph.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Minimum_Spanning_Tree.test.cpp
     title: Tests/Minimum_Spanning_Tree.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Point_Add_Range_Sum_(Add).test.cpp
     title: Tests/Point_Add_Range_Sum_(Add).test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Point_Add_Range_Sum_(Assign).test.cpp
     title: Tests/Point_Add_Range_Sum_(Assign).test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Static_RMQ.test.cpp
     title: Tests/Static_RMQ.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -50,7 +50,7 @@ data:
     \ debug(...)\n#endif\n// convenient functions\ninline void yes() { cout << \"\
     YES\" << endl; return; }\ninline void no() { cout << \"NO\" << endl; return; }\n\
     template <class T>\ninline void out(T temp) { cout << temp << endl; return; }\n\
-    // global\n\nvoid init();\nvoid solve(int case_no);\n\nsigned main() {\n#ifdef\
+    // global\n\nvoid init();\nvoid solve(int &case_no);\n\nsigned main() {\n#ifdef\
     \ POTATO\n    freopen(\"../input.txt\", \"r\", stdin);\n    // freopen(\"../output.txt\"\
     , \"w\", stdout);\n#endif\n    ios::sync_with_stdio(false);\n    cin.tie(NULL);\n\
     \    cout.tie(NULL);\n    srand(time(NULL));\n    init();\n    int t = 1;\n  \
@@ -59,8 +59,8 @@ data:
   isVerificationFile: false
   path: header.cpp
   requiredBy: []
-  timestamp: '2022-08-15 22:31:09+08:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2023-01-02 22:59:31+08:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Tests/Static_RMQ.test.cpp
   - Tests/Interval_Tree.test.cpp

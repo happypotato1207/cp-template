@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Data_Structures/Sparse_Table.hpp
     title: Data_Structures/Sparse_Table.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: header.cpp
     title: header.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/staticrmq
@@ -42,8 +42,8 @@ data:
   isVerificationFile: true
   path: Tests/Static_RMQ.test.cpp
   requiredBy: []
-  timestamp: '2022-08-15 22:31:09+08:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-01-02 22:59:31+08:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Tests/Static_RMQ.test.cpp
 layout: document

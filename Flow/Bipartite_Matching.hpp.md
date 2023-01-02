@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Matching_on_Bipartite_Graph.test.cpp
     title: Tests/Matching_on_Bipartite_Graph.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Flow/Bipartite_Matching.hpp\"\n// Template: Kuhn's algorithm\
@@ -65,7 +65,7 @@ data:
   path: Flow/Bipartite_Matching.hpp
   requiredBy: []
   timestamp: '2022-03-09 17:01:17+08:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Tests/Matching_on_Bipartite_Graph.test.cpp
 documentation_of: Flow/Bipartite_Matching.hpp

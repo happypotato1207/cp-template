@@ -2,19 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Graph/MST_Kruskal.hpp
     title: Graph/MST_Kruskal.hpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/Minimum_Spanning_Tree.test.cpp
     title: Tests/Minimum_Spanning_Tree.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Tests/UnionFind.test.cpp
     title: Tests/UnionFind.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/DSU.hpp\"\n// Template: Disjoint Set Union\n// Maintaining\
@@ -64,7 +64,7 @@ data:
   requiredBy:
   - Graph/MST_Kruskal.hpp
   timestamp: '2022-08-15 15:34:59+08:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Tests/Minimum_Spanning_Tree.test.cpp
   - Tests/UnionFind.test.cpp
