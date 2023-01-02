@@ -1,10 +1,1 @@
-{
-"Tests/Interval_Tree.test.cpp": "2022-08-15 22:31:09 +0800",
-"Tests/Longest_Increasing_Subsequence.test.cpp": "2022-08-15 22:31:09 +0800",
-"Tests/Matching_on_Bipartite_Graph.test.cpp": "2022-08-15 22:31:09 +0800",
-"Tests/Minimum_Spanning_Tree.test.cpp": "2022-08-15 22:31:09 +0800",
-"Tests/Point_Add_Range_Sum_(Add).test.cpp": "2022-08-15 22:31:09 +0800",
-"Tests/Point_Add_Range_Sum_(Assign).test.cpp": "2022-08-15 22:31:09 +0800",
-"Tests/Static_RMQ.test.cpp": "2022-08-15 22:31:09 +0800",
-"Tests/UnionFind.test.cpp": "2022-08-15 22:31:09 +0800"
-}
+{}
